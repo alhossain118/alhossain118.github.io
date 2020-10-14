@@ -1740,23 +1740,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _app_core_services_cards_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @app/core/services/cards.service */
-    "./src/app/core/services/cards.service.ts");
-    /* harmony import */
-
-
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
-    function ArticleOverviewComponent_div_0_div_2_hr_17_Template(rf, ctx) {
+    function ArticleOverviewComponent_div_0_div_1_hr_17_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "hr");
       }
@@ -1766,23 +1760,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return ["/", a1];
     };
 
-    function ArticleOverviewComponent_div_0_div_2_Template(rf, ctx) {
+    function ArticleOverviewComponent_div_0_div_1_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 3);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 4);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 6);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "h5", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "h5", 7);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 8);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7);
 
@@ -1790,9 +1784,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 9);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "i", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "i", 10);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "span");
 
@@ -1808,11 +1802,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "button", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "button", 11);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, " Read More \xA0 ");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "i", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "i", 12);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1820,7 +1814,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, ArticleOverviewComponent_div_0_div_2_hr_17_Template, 1, 0, "hr", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, ArticleOverviewComponent_div_0_div_1_hr_17_Template, 1, 0, "hr", 0);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -1865,9 +1859,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "iframe", 1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, ArticleOverviewComponent_div_0_div_2_Template, 18, 11, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, ArticleOverviewComponent_div_0_div_1_Template, 18, 11, "div", 1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -1875,33 +1867,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.articles);
       }
     }
 
-    var ArticleOverviewComponent = /*#__PURE__*/function () {
-      function ArticleOverviewComponent(cardService) {
-        _classCallCheck(this, ArticleOverviewComponent);
-
-        this.cardService = cardService;
-      }
-
-      _createClass(ArticleOverviewComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          console.log('new iframe added'); // this.cardService.getCards().subscribe(res => {
-          //   console.log("res", res)
-          // })
-        }
-      }]);
-
-      return ArticleOverviewComponent;
-    }();
+    var ArticleOverviewComponent = function ArticleOverviewComponent() {
+      _classCallCheck(this, ArticleOverviewComponent);
+    };
 
     ArticleOverviewComponent.ɵfac = function ArticleOverviewComponent_Factory(t) {
-      return new (t || ArticleOverviewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_app_core_services_cards_service__WEBPACK_IMPORTED_MODULE_1__["CardService"]));
+      return new (t || ArticleOverviewComponent)();
     };
 
     ArticleOverviewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -1912,17 +1889,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 1,
       vars: 1,
-      consts: [[4, "ngIf"], ["src", "https://api.priceguide.cards/v1/embedded?views=PWC14-S-S-S-LME&api_key=ad66e40825be521bb9edd9892cd5587a&graded_overview=true&grade=ungraded|PSA-10|BGS-9.5&title=true&dots=false", 2, "width", "100%", "height", "600px"], ["class", "blog_post", 4, "ngFor", "ngForOf"], [1, "blog_post"], [1, "blog_img"], ["alt", "blog_img1", 3, "src"], [1, "blog_content"], [1, "blog_text"], [1, "blog_heading"], [3, "routerLink"], [1, "blog_meta"], [1, "fas", "fa-calendar"], [1, "btn", "btn-default", "btn-sm", 3, "routerLink"], [1, "fas", "fa-play"]],
+      consts: [[4, "ngIf"], ["class", "blog_post", 4, "ngFor", "ngForOf"], [1, "blog_post"], [1, "blog_img"], ["alt", "blog_img1", 3, "src"], [1, "blog_content"], [1, "blog_text"], [1, "blog_heading"], [3, "routerLink"], [1, "blog_meta"], [1, "fas", "fa-calendar"], [1, "btn", "btn-default", "btn-sm", 3, "routerLink"], [1, "fas", "fa-play"]],
       template: function ArticleOverviewComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ArticleOverviewComponent_div_0_Template, 3, 1, "div", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ArticleOverviewComponent_div_0_Template, 2, 1, "div", 0);
         }
 
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.articles);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLink"]],
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"]],
       styles: ["i[_ngcontent-%COMP%] {\n  margin-bottom: 4px;\n}\n\n.fa-calendar[_ngcontent-%COMP%] {\n  color: #ff324d;\n  margin-right: 5px;\n}\n\nh5[_ngcontent-%COMP%] {\n  text-transform: capitalize;\n  cursor: pointer;\n}\n\nimg[_ngcontent-%COMP%] {\n  max-height: 425px;\n  width: auto;\n}\n\nh5[_ngcontent-%COMP%] {\n  font-size: 24px;\n}\n\np[_ngcontent-%COMP%] {\n  font-size: 16px;\n}\n\n.blog_meta[_ngcontent-%COMP%] {\n  margin: 2% 0;\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin: 1% 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9ibG9nL2NvbXBvbmVudHMvYXJ0aWNsZS1vdmVydmlldy9hcnRpY2xlLW92ZXJ2aWV3LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9tYWluL2Jsb2cvY29tcG9uZW50cy9hcnRpY2xlLW92ZXJ2aWV3L2FydGljbGUtb3ZlcnZpZXcuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBQTtBQ0NGOztBREVBO0VBQ0UsY0FBQTtFQUNBLGlCQUFBO0FDQ0Y7O0FERUE7RUFDRSwwQkFBQTtFQUNBLGVBQUE7QUNDRjs7QURFQTtFQUNFLGlCQUFBO0VBQ0EsV0FBQTtBQ0NGOztBREVBO0VBQ0UsZUFBQTtBQ0NGOztBREVBO0VBQ0UsZUFBQTtBQ0NGOztBREVBO0VBQ0UsWUFBQTtBQ0NGOztBREVBO0VBQ0UsWUFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvbWFpbi9ibG9nL2NvbXBvbmVudHMvYXJ0aWNsZS1vdmVydmlldy9hcnRpY2xlLW92ZXJ2aWV3LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaSB7XG4gIG1hcmdpbi1ib3R0b206IDRweDtcbn1cblxuLmZhLWNhbGVuZGFyIHtcbiAgY29sb3I6ICNmZjMyNGQ7XG4gIG1hcmdpbi1yaWdodDogNXB4O1xufVxuXG5oNSB7XG4gIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbmltZyB7XG4gIG1heC1oZWlnaHQ6IDQyNXB4O1xuICB3aWR0aDogYXV0bztcbn1cblxuaDUge1xuICBmb250LXNpemU6IDI0cHg7XG59XG5cbnAge1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi5ibG9nX21ldGEge1xuICBtYXJnaW46IDIlIDA7XG59XG5cbmJ1dHRvbiB7XG4gIG1hcmdpbjogMSUgMDtcbn1cbiIsImkge1xuICBtYXJnaW4tYm90dG9tOiA0cHg7XG59XG5cbi5mYS1jYWxlbmRhciB7XG4gIGNvbG9yOiAjZmYzMjRkO1xuICBtYXJnaW4tcmlnaHQ6IDVweDtcbn1cblxuaDUge1xuICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG5pbWcge1xuICBtYXgtaGVpZ2h0OiA0MjVweDtcbiAgd2lkdGg6IGF1dG87XG59XG5cbmg1IHtcbiAgZm9udC1zaXplOiAyNHB4O1xufVxuXG5wIHtcbiAgZm9udC1zaXplOiAxNnB4O1xufVxuXG4uYmxvZ19tZXRhIHtcbiAgbWFyZ2luOiAyJSAwO1xufVxuXG5idXR0b24ge1xuICBtYXJnaW46IDElIDA7XG59Il19 */"]
     });
     /*@__PURE__*/
@@ -1935,11 +1912,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           templateUrl: './article-overview.component.html',
           styleUrls: ['./article-overview.component.scss']
         }]
-      }], function () {
-        return [{
-          type: _app_core_services_cards_service__WEBPACK_IMPORTED_MODULE_1__["CardService"]
-        }];
-      }, {
+      }], null, {
         articles: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }]
