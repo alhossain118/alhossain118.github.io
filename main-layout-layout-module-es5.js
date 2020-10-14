@@ -36535,6 +36535,7 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
         this.playerVars = {
           cc_lang_pref: 'en'
         };
+        console.log('youtube loaded');
       }
 
       _createClass2(YoutubePlayerComponent, [{
@@ -36560,15 +36561,22 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
       }, {
         key: "windowContainer",
         get: function get() {
-          if (window.innerWidth < 400) {
+          console.log(window.innerWidth);
+
+          if (window.innerWidth < 420) {
             return {
-              height: window.innerWidth - 100,
-              width: window.innerWidth
+              height: (window.innerWidth - 100) * 0.9,
+              width: window.innerWidth * 0.9
+            };
+          } else if (420 < window.innerWidth && window.innerWidth < 990) {
+            return {
+              height: 350,
+              width: 450
             };
           } else {
             return {
-              height: 400,
-              width: 600
+              height: 350,
+              width: 500
             };
           }
         }
@@ -36614,7 +36622,7 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
         }
       },
       directives: [ngx_youtube_player__WEBPACK_IMPORTED_MODULE_1__["YoutubePlayerComponent"]],
-      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvcmUvY29tcG9uZW50cy95b3V0dWJlLXBsYXllci95b3V0dWJlLXBsYXllci5jb21wb25lbnQuc2NzcyJ9 */"]
+      styles: [".container-youtube[_ngcontent-%COMP%] {\n  margin-top: 5%;\n  margin-bottom: 5%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvY29yZS9jb21wb25lbnRzL3lvdXR1YmUtcGxheWVyL3lvdXR1YmUtcGxheWVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb3JlL2NvbXBvbmVudHMveW91dHViZS1wbGF5ZXIveW91dHViZS1wbGF5ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxjQUFBO0VBQ0EsaUJBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2NvcmUvY29tcG9uZW50cy95b3V0dWJlLXBsYXllci95b3V0dWJlLXBsYXllci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXIteW91dHViZSB7XG4gICAgbWFyZ2luLXRvcDogNSU7XG4gICAgbWFyZ2luLWJvdHRvbTogNSU7XG59IiwiLmNvbnRhaW5lci15b3V0dWJlIHtcbiAgbWFyZ2luLXRvcDogNSU7XG4gIG1hcmdpbi1ib3R0b206IDUlO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -36626,7 +36634,9 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
           templateUrl: './youtube-player.component.html',
           styleUrls: ['./youtube-player.component.scss']
         }]
-      }], null, {
+      }], function () {
+        return [];
+      }, {
         id: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }]
@@ -37154,7 +37164,7 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
         }
       },
       directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"]],
-      styles: [".widget[_ngcontent-%COMP%] {\n  padding: 15px;\n  border: 1px solid #ddd;\n}\n\np[_ngcontent-%COMP%] {\n  font-size: 15px;\n}\n\n.validationError[_ngcontent-%COMP%] {\n  color: red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9ibG9nL2NvbXBvbmVudHMvc3Vic2NyaWJlLWVtYWlsL3N1YnNjcmliZS1lbWFpbC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbWFpbi9ibG9nL2NvbXBvbmVudHMvc3Vic2NyaWJlLWVtYWlsL3N1YnNjcmliZS1lbWFpbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtBQ0NKOztBREVBO0VBQ0ksZUFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvbWFpbi9ibG9nL2NvbXBvbmVudHMvc3Vic2NyaWJlLWVtYWlsL3N1YnNjcmliZS1lbWFpbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi53aWRnZXQge1xuICAgIHBhZGRpbmc6IDE1cHg7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2RkZDtcbn1cblxucHtcbiAgICBmb250LXNpemU6IDE1cHg7XG59XG5cbi52YWxpZGF0aW9uRXJyb3Ige1xuICAgIGNvbG9yOiByZWQ7XG59IiwiLndpZGdldCB7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7XG59XG5cbnAge1xuICBmb250LXNpemU6IDE1cHg7XG59XG5cbi52YWxpZGF0aW9uRXJyb3Ige1xuICBjb2xvcjogcmVkO1xufSJdfQ== */"]
+      styles: [".widget[_ngcontent-%COMP%] {\n  padding: 15px;\n  border: 1px solid #ddd;\n}\n\np[_ngcontent-%COMP%] {\n  font-size: 15px;\n}\n\n.validationError[_ngcontent-%COMP%] {\n  color: red;\n}\n\n@media only screen and (max-width: 992px) {\n  .widget[_ngcontent-%COMP%] {\n    margin-top: 20%;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9ibG9nL2NvbXBvbmVudHMvc3Vic2NyaWJlLWVtYWlsL3N1YnNjcmliZS1lbWFpbC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbWFpbi9ibG9nL2NvbXBvbmVudHMvc3Vic2NyaWJlLWVtYWlsL3N1YnNjcmliZS1lbWFpbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtBQ0NKOztBREVBO0VBQ0ksZUFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtBQ0NKOztBREVBO0VBQ0k7SUFDSSxlQUFBO0VDQ047QUFDRiIsImZpbGUiOiJzcmMvYXBwL21haW4vYmxvZy9jb21wb25lbnRzL3N1YnNjcmliZS1lbWFpbC9zdWJzY3JpYmUtZW1haWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud2lkZ2V0IHtcbiAgICBwYWRkaW5nOiAxNXB4O1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7XG59XG5cbnB7XG4gICAgZm9udC1zaXplOiAxNXB4O1xufVxuXG4udmFsaWRhdGlvbkVycm9yIHtcbiAgICBjb2xvcjogcmVkO1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDk5MnB4KSB7XG4gICAgLndpZGdldCB7XG4gICAgICAgIG1hcmdpbi10b3A6IDIwJTtcbiAgICB9XG4gIH1cbiAgIiwiLndpZGdldCB7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7XG59XG5cbnAge1xuICBmb250LXNpemU6IDE1cHg7XG59XG5cbi52YWxpZGF0aW9uRXJyb3Ige1xuICBjb2xvcjogcmVkO1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDk5MnB4KSB7XG4gIC53aWRnZXQge1xuICAgIG1hcmdpbi10b3A6IDIwJTtcbiAgfVxufSJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -37199,110 +37209,105 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
     var Companies = [{
       name: 'Mars Wrigley Confectionery',
       location: 'Chicago, Ill., USA',
-      image: 'assets/photoshop/top-25/mars-chocolate.jpg',
-      companyPageImg: 'assets/photoshop/company/mars.jpg',
-      netSales: '18 Billion',
+      image: 'assets/photoshop/top-25/mars.jpg',
+      companyPageImg: 'assets/photoshop/company/mars-1.jpg',
+      netSales: '18 Billion(2019)',
       website: 'https://www.mars.com/made-by-mars/mars-wrigley',
       cheifOfficer: 'Andrew Clarke(Pres. of Mars Wrigley Confectionery)',
       numberOfEmployees: '34,000',
-      numberOfFactories: 'N/A'
+      numberOfFactories: 'N/A',
+      infoAvailable: true,
+      verified: true
     }, {
       name: 'Ferrero Group',
       location: 'Luxembourg, Italy',
-      image: 'assets/photoshop/top-25/ferrero-2.jpg'
+      image: 'assets/photoshop/top-25/ferrero.jpg',
+      companyPageImg: 'assets/photoshop/company/ferrero.jpg',
+      website: 'https://www.ferrero.com',
+      netSales: '13 Billion(2019)',
+      cheifOfficer: 'Giovanni Ferrero(CEO)',
+      numberOfEmployees: '40,000',
+      numberOfFactories: '25',
+      infoAvailable: true,
+      verified: true
     }, {
       name: 'Mondelez International',
       location: 'Deerfield, Ill., USA',
-      image: 'assets/photoshop/top-25/mondelez-1.jpg'
+      image: 'assets/photoshop/top-25/mondelez-1.jpg',
+      website: 'https://www.mondelezinternational.com',
+      companyPageImg: 'assets/photoshop/company/mondelez.jpg',
+      cheifOfficer: 'Dirk Van de Put(CEO)',
+      // netSales: '3.4 billion(2018)',
+      netSales: '11.8 billion(2019)',
+      numberOfEmployees: '83,000 (2018)',
+      numberOfFactories: '150',
+      infoAvailable: true,
+      verified: true
     }, {
       name: 'Meiji Co. Ltd.',
       location: 'Tokyo, Japan',
-      image: 'assets/photoshop/top-25/meiji.jpg'
+      image: 'assets/photoshop/top-25/meiji.jpg',
+      website: 'https://www.meiji.com/global',
+      companyPageImg: 'assets/photoshop/company/meji.jpg',
+      netSales: '9.721 Billion(2019)',
+      cheifOfficer: 'Kazuo Kawamura, (President) ',
+      numberOfEmployees: '17,600(2019)',
+      numberOfFactories: '7',
+      infoAvailable: true,
+      verified: true
     }, {
       name: 'Hershey Co.',
       location: 'Hershey, Pa., USA',
-      image: 'assets/photoshop/top-25/hersheys.jpg'
+      image: 'assets/photoshop/top-25/hersheys.jpg',
+      website: 'https://www.hersheys.com',
+      companyPageImg: 'assets/photoshop/company/hersheys.jpg',
+      cheifOfficer: 'Michele Buck(CEO)',
+      netSales: '7.986 Billion(2019)',
+      numberOfEmployees: '16,140(2018)',
+      numberOfFactories: '17',
+      infoAvailable: true,
+      verified: true
     }, {
       name: 'Nestle SA',
       location: 'Vevey, Switzerland',
-      image: 'assets/photoshop/top-25/nestle.jpg'
+      image: 'assets/photoshop/top-25/nestle.jpg',
+      website: 'https://www.nestle.com',
+      companyPageImg: 'assets/photoshop/company/nestle.jpg',
+      cheifOfficer: 'Ulf Mark Schneider(CEO)',
+      netSales: '7.925 billion(2019)',
+      numberOfEmployees: '352,000(2019)',
+      numberOfFactories: '79',
+      infoAvailable: false,
+      verified: false
     }, {
       name: 'Chocoladefabriken Lindt & Sprungli AG',
       location: 'Kilchberg, Switzerland',
-      image: 'assets/photoshop/top-25/lindt.jpg'
+      image: 'assets/photoshop/top-25/lindt.jpg',
+      companyPageImg: 'assets/photoshop/company/lindt.jpg',
+      netSales: '4.574 Billion(2019)'
     }, {
       name: 'pladis',
       location: '	London, UK',
-      image: 'assets/photoshop/top-25/pladis.jpg'
+      image: 'assets/photoshop/top-25/pladis.jpg',
+      companyPageImg: 'assets/photoshop/company/pladis.jpg',
+      netSales: '4.515 Billion(2019)'
     }, {
       name: 'Haribo GmbH & Co. K.G.',
       location: 'Bonn, Germany',
-      image: 'assets/photoshop/top-25/haribo.jpg'
+      image: 'assets/photoshop/top-25/haribo.jpg',
+      companyPageImg: 'assets/photoshop/company/haribo.jpg',
+      netSales: '3.3 Billion(2019)'
     }, {
       name: 'Ezaki Glico Co. Ltd.',
       location: 'Osaka, Japan',
-      image: 'assets/photoshop/top-25/glico.jpg'
-    }, {
-      name: 'Perfetti Van Melle',
-      location: 'Spa Lainate, Italy, & Breda, Netherlands',
-      image: 'assets/photoshop/top-25/perfetti.jpg'
-    }, {
-      name: 'General Mills',
-      location: 'Minneapolis, Minn., USA',
-      image: 'assets/photoshop/top-25/general-mills.jpg'
-    }, {
-      name: 'Kellogg Co.',
-      location: 'Battle Creek, Mich., USA',
-      image: 'assets/photoshop/top-25/kelloggs.jpg'
-    }, {
-      name: 'Orion Corp.',
-      location: 'Seoul, Korea',
-      image: 'assets/images/tranding_post_img1.jpg'
-    }, {
-      name: 'August Storck KG',
-      location: 'Berlin, Germany',
-      image: 'assets/photoshop/top-25/storck.jpg'
-    }, {
-      name: 'Morinaga & Co. Ltd.',
-      location: 'Tokyo, Japan	',
-      image: 'assets/photoshop/top-25/morinaga.jpg'
-    }, {
-      name: 'Bourbon Corp.',
-      location: 'Niigata, Japan',
-      image: 'assets/images/tranding_post_img1.jpg'
-    }, {
-      name: 'United Confectionary Manufacturers',
-      location: 'Moscow, Russia',
-      image: 'assets/images/tranding_post_img1.jpg'
-    }, {
-      name: 'Chocolat Frey AB',
-      location: 'Buchs, Switerland',
-      image: 'assets/photoshop/top-25/frey.jpg'
-    }, {
-      name: 'Arcor',
-      location: 'Buenos Aires, Argentina',
-      image: 'assets/photoshop/top-25/arcor.jpg'
-    }, {
-      name: 'Valeo Foods Group',
-      location: 'Dublin, Ireland	',
-      image: 'assets/photoshop/top-25/valeo.jpg'
-    }, {
-      name: 'Crown Confectionery Co. Ltd.',
-      location: 'Seoul, Korea',
-      image: 'assets/photoshop/top-25/crown.jpg'
-    }, {
-      name: 'Cacau Show',
-      location: 'Itapevi, SP, Brazil',
-      image: 'assets/photoshop/top-25/cacau.jpg'
-    }, {
-      name: 'Cemoi',
-      location: 'Perpignan, France',
-      image: 'assets/photoshop/top-25/cemoi.jpg'
-    }, {
-      name: 'Clif Bar & Co.',
-      location: 'Emeryville, Calif.',
-      image: 'assets/photoshop/top-25/clif.jpg'
-    }];
+      image: 'assets/photoshop/top-25/glico.jpg',
+      companyPageImg: 'assets/photoshop/company/glico.jpg',
+      netSales: '3.156 Billion(2019)'
+    }]; // tslint:disable-next-line
+
+    var stats = {
+      a: 'https://www.statista.com/statistics/252097/net-sales-of-the-leading-10-confectionery-companies-worldwide/'
+    };
     /***/
   },
 
@@ -37355,10 +37360,70 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
     var _mars_mars_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./mars/mars.component */
     "./src/app/main/company/mars/mars.component.ts");
+    /* harmony import */
+
+
+    var _ferrero_ferrero_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./ferrero/ferrero.component */
+    "./src/app/main/company/ferrero/ferrero.component.ts");
+    /* harmony import */
+
+
+    var _mondelez_mondelez_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./mondelez/mondelez.component */
+    "./src/app/main/company/mondelez/mondelez.component.ts");
+    /* harmony import */
+
+
+    var _meiji_meiji_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./meiji/meiji.component */
+    "./src/app/main/company/meiji/meiji.component.ts");
+    /* harmony import */
+
+
+    var _hersheys_hersheys_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ./hersheys/hersheys.component */
+    "./src/app/main/company/hersheys/hersheys.component.ts");
+    /* harmony import */
+
+
+    var _nestle_nestle_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! ./nestle/nestle.component */
+    "./src/app/main/company/nestle/nestle.component.ts");
 
     function CompanyComponent_div_0_candy_mars_29_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "candy-mars");
+      }
+    }
+
+    function CompanyComponent_div_0_candy_ferrero_30_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "candy-ferrero");
+      }
+    }
+
+    function CompanyComponent_div_0_candy_mondelez_31_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "candy-mondelez");
+      }
+    }
+
+    function CompanyComponent_div_0_candy_meiji_32_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "candy-meiji");
+      }
+    }
+
+    function CompanyComponent_div_0_candy_hersheys_33_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "candy-hersheys");
+      }
+    }
+
+    function CompanyComponent_div_0_candy_nestle_34_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "candy-nestle");
       }
     }
 
@@ -37450,6 +37515,16 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](29, CompanyComponent_div_0_candy_mars_29_Template, 1, 0, "candy-mars", 8);
 
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](30, CompanyComponent_div_0_candy_ferrero_30_Template, 1, 0, "candy-ferrero", 8);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, CompanyComponent_div_0_candy_mondelez_31_Template, 1, 0, "candy-mondelez", 8);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](32, CompanyComponent_div_0_candy_meiji_32_Template, 1, 0, "candy-meiji", 8);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](33, CompanyComponent_div_0_candy_hersheys_33_Template, 1, 0, "candy-hersheys", 8);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](34, CompanyComponent_div_0_candy_nestle_34_Template, 1, 0, "candy-nestle", 8);
+
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -37480,7 +37555,7 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Net Sales: ", ctx_r0.company.netSales, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Net Sales: $", ctx_r0.company.netSales, "");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -37501,6 +37576,26 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngSwitchCase", "Mars Wrigley Confectionery");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngSwitchCase", "Ferrero Group");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngSwitchCase", "Mondelez International");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngSwitchCase", "Meiji Co. Ltd.");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngSwitchCase", "Hershey Co.");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngSwitchCase", "Nestle SA");
       }
     }
 
@@ -37509,7 +37604,6 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
         _classCallCheck2(this, CompanyComponent);
 
         this.route = route;
-        window.scrollTo(0, 0);
       }
 
       _createClass2(CompanyComponent, [{
@@ -37522,6 +37616,7 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
 
             var companyName = _this87.url.toLowerCase().split('-').join(' ');
 
+            console.log(companyName);
             _this87.company = _blog_pages_top_25_top_25_data__WEBPACK_IMPORTED_MODULE_1__["Companies"].find(function (company) {
               return company.name.toLowerCase() === companyName;
             });
@@ -37544,15 +37639,15 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
       consts: [[4, "ngIf"], [1, "row"], [1, "col-lg-4", "align-img"], ["alt", "", 3, "src"], [1, "col-lg-8"], [1, "company-data"], ["target", "_blank", 3, "href"], [3, "ngSwitch"], [4, "ngSwitchCase"]],
       template: function CompanyComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, CompanyComponent_div_0_Template, 30, 11, "div", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, CompanyComponent_div_0_Template, 35, 16, "div", 0);
         }
 
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.company);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgSwitchCase"], _mars_mars_component__WEBPACK_IMPORTED_MODULE_4__["MarsComponent"]],
-      styles: [".company-data[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 14px;\n  font-weight: 600;\n  color: black;\n  margin-bottom: 1px;\n}\n\n.align-img[_ngcontent-%COMP%] {\n  display: flex;\n  align-self: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9jb21wYW55L2NvbXBhbnkuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21haW4vY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFO0VBQ0UsZUFBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0FDQUo7O0FESUE7RUFDRSxhQUFBO0VBQ0Esa0JBQUE7QUNERiIsImZpbGUiOiJzcmMvYXBwL21haW4vY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbXBhbnktZGF0YSB7XG4gIHAge1xuICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICBmb250LXdlaWdodDogNjAwO1xuICAgIGNvbG9yOiBibGFjaztcbiAgICBtYXJnaW4tYm90dG9tOiAxcHg7XG4gIH1cbn1cblxuLmFsaWduLWltZyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLXNlbGY6IGNlbnRlcjtcbn1cbiIsIi5jb21wYW55LWRhdGEgcCB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgY29sb3I6IGJsYWNrO1xuICBtYXJnaW4tYm90dG9tOiAxcHg7XG59XG5cbi5hbGlnbi1pbWcge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1zZWxmOiBjZW50ZXI7XG59Il19 */"]
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgSwitchCase"], _mars_mars_component__WEBPACK_IMPORTED_MODULE_4__["MarsComponent"], _ferrero_ferrero_component__WEBPACK_IMPORTED_MODULE_5__["FerreroComponent"], _mondelez_mondelez_component__WEBPACK_IMPORTED_MODULE_6__["MondelezComponent"], _meiji_meiji_component__WEBPACK_IMPORTED_MODULE_7__["MeijiComponent"], _hersheys_hersheys_component__WEBPACK_IMPORTED_MODULE_8__["HersheysComponent"], _nestle_nestle_component__WEBPACK_IMPORTED_MODULE_9__["NestleComponent"]],
+      styles: [".company-data[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 14px;\n  font-weight: 600;\n  color: black;\n  margin-bottom: 1px;\n}\n\n.align-img[_ngcontent-%COMP%] {\n  display: flex;\n  align-self: center;\n}\n\n@media only screen and (max-width: 767px) {\n  .align-img[_ngcontent-%COMP%] {\n    justify-content: center;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9jb21wYW55L2NvbXBhbnkuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21haW4vY29tcGFueS9jb21wYW55LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFO0VBQ0UsZUFBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0FDQUo7O0FESUE7RUFDRSxhQUFBO0VBQ0Esa0JBQUE7QUNERjs7QURJQTtFQUNFO0lBQ0UsdUJBQUE7RUNERjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvbWFpbi9jb21wYW55L2NvbXBhbnkuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29tcGFueS1kYXRhIHtcbiAgcCB7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgY29sb3I6IGJsYWNrO1xuICAgIG1hcmdpbi1ib3R0b206IDFweDtcbiAgfVxufVxuXG4uYWxpZ24taW1nIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24tc2VsZjogY2VudGVyO1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2N3B4KSB7XG4gIC5hbGlnbi1pbWcge1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICB9XG59IiwiLmNvbXBhbnktZGF0YSBwIHtcbiAgZm9udC1zaXplOiAxNHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBjb2xvcjogYmxhY2s7XG4gIG1hcmdpbi1ib3R0b206IDFweDtcbn1cblxuLmFsaWduLWltZyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLXNlbGY6IGNlbnRlcjtcbn1cblxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjdweCkge1xuICAuYWxpZ24taW1nIHtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgfVxufSJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -37569,6 +37664,455 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
           type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]
         }];
       }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/main/company/ferrero/ferrero.component.ts":
+  /*!***********************************************************!*\
+    !*** ./src/app/main/company/ferrero/ferrero.component.ts ***!
+    \***********************************************************/
+
+  /*! exports provided: FerreroComponent */
+
+  /***/
+  function srcAppMainCompanyFerreroFerreroComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FerreroComponent", function () {
+      return FerreroComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var FerreroComponent = function FerreroComponent() {
+      _classCallCheck2(this, FerreroComponent);
+    };
+
+    FerreroComponent.ɵfac = function FerreroComponent_Factory(t) {
+      return new (t || FerreroComponent)();
+    };
+
+    FerreroComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: FerreroComponent,
+      selectors: [["candy-ferrero"]],
+      decls: 46,
+      vars: 0,
+      consts: [[1, "brand-line"], [1, "box"]],
+      template: function FerreroComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " In the 1940s, Pietro Ferrero transformed a pastry shop into a factory. The Ferro Family was the first Italian manufacturer after World War 2 to open production sites and offices abroad in the confectionary sector, which brought about making the company into an international group.\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " In 1946, Pietro Ferrero a confectioner and small-time pastry maker added hazelnut as a way to save money on chocolate. This innovation led to the development of Nutella. Today, The Ferrero Group is considered the 3rd largest chocolate producer and confectionery company in the world today. Their global headquarters is based in Luxembourg, Italy and they are present in 55 countries and territories around the world: 25 production plants in 5 continents, 8 Ferrero Hazelnut Company manufacturing plants, 6 agricultural companies and the Michele Ferrero Entrepreneurial Project, active in Cameroon, South Africa and India.\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " Among the chocolate confectionery segment, Ferrero has a 13.5% share of the global market, ranking it the 3rd largest player in 2017/2018. In the Sweet packaged foods segment, Ferrero Group has a 3.4% share of the global market, making it the third largest player in 2018. In 2017/2018, Ferrero sold \u20AC10.7 billion worth of packaged confectionery goods.\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "p", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " Ferrero produces a line of Ferrero branded chocolate products such as:\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, " Pocket Coffee ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " Mon Ch\xE9ri ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, " Ferrero K\xFCsschen ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "p", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, " Ferrero produces the Ferrero Prestige line, which comprises three different brands of pralines:\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " Ferrero Rocher ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Ferrero Rondnoir ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " Garden Coco ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "p", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Ferrero's Kinder brand line consists of:");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, " Kinder Surprise ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, " Kinder Joy ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, " Kinder Chocolate ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, " Kinder Happy Hippo ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " Kinder Maxi ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, " Kinder Duplo ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, " Kinder Country ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, " Kinder D\xE9lice ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, " Kinder Bueno ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      },
+      styles: [".brand-line[_ngcontent-%COMP%] {\n  font-weight: 600;\n}\n\n.box[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  margin-bottom: 20px;\n}\n\n@media only screen and (max-width: 767px) {\n  .box[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    flex: 1 1 120px;\n  }\n}\n\n@media only screen and (min-width: 768px) {\n  .box[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    flex: 1 1 160px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9jb21wYW55L2ZlcnJlcm8vZmVycmVyby5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbWFpbi9jb21wYW55L2ZlcnJlcm8vZmVycmVyby5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFBO0FDQ0o7O0FEQ0E7RUFDSSxhQUFBO0VBQ0EsZUFBQTtFQUNBLG1CQUFBO0FDRUo7O0FEQ0U7RUFDSTtJQUNJLGVBQUE7RUNFUjtBQUNGOztBRENFO0VBQ0k7SUFDSSxlQUFBO0VDQ1I7QUFDRiIsImZpbGUiOiJzcmMvYXBwL21haW4vY29tcGFueS9mZXJyZXJvL2ZlcnJlcm8uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnJhbmQtbGluZSB7XG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcbn1cbi5ib3gge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC13cmFwOiB3cmFwO1xuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XG4gIH1cbiAgXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY3cHgpIHtcbiAgICAgIC5ib3ggPiAqIHtcbiAgICAgICAgICBmbGV4OiAxIDEgMTIwcHg7XG4gICAgICB9XG4gIH1cbiAgXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgICAgIC5ib3ggPiAqIHtcbiAgICAgICAgICBmbGV4OiAxIDEgMTYwcHg7XG4gICAgICB9XG4gIH1cbiAgIiwiLmJyYW5kLWxpbmUge1xuICBmb250LXdlaWdodDogNjAwO1xufVxuXG4uYm94IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2N3B4KSB7XG4gIC5ib3ggPiAqIHtcbiAgICBmbGV4OiAxIDEgMTIwcHg7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgLmJveCA+ICoge1xuICAgIGZsZXg6IDEgMSAxNjBweDtcbiAgfVxufSJdfQ== */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FerreroComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'candy-ferrero',
+          templateUrl: './ferrero.component.html',
+          styleUrls: ['./ferrero.component.scss']
+        }]
+      }], null, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/main/company/hersheys/hersheys.component.ts":
+  /*!*************************************************************!*\
+    !*** ./src/app/main/company/hersheys/hersheys.component.ts ***!
+    \*************************************************************/
+
+  /*! exports provided: HersheysComponent */
+
+  /***/
+  function srcAppMainCompanyHersheysHersheysComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HersheysComponent", function () {
+      return HersheysComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ../../../core/components/youtube-player/youtube-player.component */
+    "./src/app/core/components/youtube-player/youtube-player.component.ts");
+
+    var HersheysComponent = function HersheysComponent() {
+      _classCallCheck2(this, HersheysComponent);
+    };
+
+    HersheysComponent.ɵfac = function HersheysComponent_Factory(t) {
+      return new (t || HersheysComponent)();
+    };
+
+    HersheysComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: HersheysComponent,
+      selectors: [["candy-hersheys"]],
+      decls: 60,
+      vars: 0,
+      consts: [[1, "brand-line"], ["id", "ophXa_LvUKk"], [1, "box"]],
+      template: function HersheysComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " The Hershey Company(Hershey's), is an American multinational company and one of the largest chocolate manufacturers in the world. Their headquarters is located in Hershey, Pennsylvania, which is also home to Hersheypark and Hershey's Chocolate World. It was founded by Milton S. Hershey in 1894 as the Hershey Chocolate Company, a subsidiary of his Lancaster Caramel Company.\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Check out a video on how Hershey's chocolate is made:");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "candy-youtube-player", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "p", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " Here are some of the delicious brands that Hershey's manufacturers:\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Hershey's");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Hershey's Kisses");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Reese's");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Kit Kat");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "5th Avenue");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "BROOKSIDE");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Cadbury");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Milk Duds");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Heath");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Mounds");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "Almond Joy");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Bubble Yum");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Twizzlers");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "Jolly Rancher");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "Ice Breakers");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "Breaksavers");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, "Payday");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "Rolo");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "mr.Goodbar");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, "Whoopers");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](49, "Whatchamacallit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, "Skor");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "Symphony");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, "York");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](57, "Zagnut");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](59, "Zero");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      },
+      directives: [_core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_1__["YoutubePlayerComponent"]],
+      styles: [".brand-line[_ngcontent-%COMP%] {\n  font-weight: 600;\n}\n\n.box[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  margin-bottom: 20px;\n}\n\n@media only screen and (max-width: 767px) {\n  .box[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    flex: 1 1 120px;\n  }\n}\n\n@media only screen and (min-width: 768px) {\n  .box[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    flex: 1 1 160px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9jb21wYW55L2hlcnNoZXlzL2hlcnNoZXlzLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9tYWluL2NvbXBhbnkvaGVyc2hleXMvaGVyc2hleXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxnQkFBQTtBQ0NKOztBRENBO0VBQ0ksYUFBQTtFQUNBLGVBQUE7RUFDQSxtQkFBQTtBQ0VKOztBRENFO0VBQ0k7SUFDSSxlQUFBO0VDRVI7QUFDRjs7QURDRTtFQUNJO0lBQ0ksZUFBQTtFQ0NSO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9tYWluL2NvbXBhbnkvaGVyc2hleXMvaGVyc2hleXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnJhbmQtbGluZSB7XG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcbn1cbi5ib3gge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC13cmFwOiB3cmFwO1xuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XG4gIH1cbiAgXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY3cHgpIHtcbiAgICAgIC5ib3ggPiAqIHtcbiAgICAgICAgICBmbGV4OiAxIDEgMTIwcHg7XG4gICAgICB9XG4gIH1cbiAgXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgICAgIC5ib3ggPiAqIHtcbiAgICAgICAgICBmbGV4OiAxIDEgMTYwcHg7XG4gICAgICB9XG4gIH1cbiAgIiwiLmJyYW5kLWxpbmUge1xuICBmb250LXdlaWdodDogNjAwO1xufVxuXG4uYm94IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2N3B4KSB7XG4gIC5ib3ggPiAqIHtcbiAgICBmbGV4OiAxIDEgMTIwcHg7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgLmJveCA+ICoge1xuICAgIGZsZXg6IDEgMSAxNjBweDtcbiAgfVxufSJdfQ== */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HersheysComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'candy-hersheys',
+          templateUrl: './hersheys.component.html',
+          styleUrls: ['./hersheys.component.scss']
+        }]
+      }], null, null);
     })();
     /***/
 
@@ -37599,11 +38143,15 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
     var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ../../../core/components/youtube-player/youtube-player.component */
+    "./src/app/core/components/youtube-player/youtube-player.component.ts");
 
     var MarsComponent = function MarsComponent() {
       _classCallCheck2(this, MarsComponent);
-
-      window.scrollTo(0, 0);
     };
 
     MarsComponent.ɵfac = function MarsComponent_Factory(t) {
@@ -37613,393 +38161,346 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
     MarsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: MarsComponent,
       selectors: [["candy-mars"]],
-      decls: 126,
+      decls: 107,
       vars: 0,
-      consts: [[1, "company-information"], [1, "box"]],
+      consts: [[1, "company-information"], [1, "candy-name"], ["id", "l-Tm6XGfB_g"], [1, "box"], ["href", "https://www.3musketeers.com/", "target", "_blank"], ["href", "https://5gum.com/", "target", "_blank"], ["href", ""], ["href", "https://www.americanheritagechocolate.com/", "target", "_blank"], ["href", "https://www.amicelli.de/", "target", "_blank"], ["href", "https://www.balisto.de/", "target", "_blank"], ["href", "https://www.combos.com/", "target", "_blank"], ["href", "https://dovechocolate.com/tagged/dove", "target", "_blank"], ["href", "https://www.ethelm.com/", "target", "_blank"], ["href", "http://goodnessknows.com/", "target", "_blank"], ["href", "http://juicyfruit.com/", "target", "_blank"], ["href", "http://www.mms.com/", "target", "_blank"], ["href", "https://maltesersusa.tumblr.com/", "target", "_blank"], ["href", "http://www.marsbar.com/", "target", "_blank"], ["href", "https://www.milkywaybar.com/", "target", "_blank"], ["href", "https://www.orbitgum.com/", "target", "_blank"], ["href", "https://skittles.com/", "target", "_blank"], ["href", "https://snickers.tumblr.com/", "target", "_blank"], ["href", "https://twix.com/", "target", "_blank"], ["href", "https://www.extragum.com/", "target", "_blank"]],
       template: function MarsComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Mars Wrigley Confectionery is a division of Mars Inc. Many of their most popular products include M&M\u2019S\xAE, SNICKERS\xAE, ORBIT\xAE, EXTRA\xAE and Skittles\xAE, which are enjoyed in over 180 countries.\n");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Mars Wrigley Confectionery is a division of Mars Inc. Many of their most popular products include ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "span", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " M&M\u2019S");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " , ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Some of these products include product lines manufactured by Mars.");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "span", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " 3 Musketeers ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "SNICKERS");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, ", ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " Bounty ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "span", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Celebrations ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "ORBIT");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, ", ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, " Cirku ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "span", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, " CocoaVia ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "EXTRA,");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " and ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " Combos ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "span", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " Dolmio ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Skittles");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " Dove ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, ", which are enjoyed in over 180 countries.\n");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "p");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Ebly ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " Check out a video of the Mars Wrigley Confectionery factory in Waco, Tx.\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "candy-youtube-player", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Here are just some of the brands manufactured by Mars");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "p");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " Ethel M ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, " (click the brands to view website)*\n");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, " FLAVIA ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, " 3 Musketeers ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, " Fdivng ");
-
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, " Flyte ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "a", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, " 5 Gum ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, " Galaxy ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "a", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Altoids");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, " Galaxy Bubbles ");
-
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, " Galaxy Minstrels ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "a", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, " American Heritage ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, " goodnessKNOWS ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "a", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, " Amicelli ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, " Kudos ");
-
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, " M-Azing ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "a", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "Balisto");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, " M&M's ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, " Big Red ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, " Maltesers ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, " Bounty ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, " Marathon ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, " Celebrations ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, " Mars ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "a", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, " Combos ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](52, " Masterfoods ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, " Doublemint ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, " Milky Way ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "a", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, "Dove");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, " Munch ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, " Promite ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, " Eclipse ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, " Revels ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "a", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61, " Ethel M ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, " Snickers ");
-
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](64, " Topic ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "a", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](64, " goodnessKnows ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](65, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](66, " Tracker ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](66, " Hubba Bubba ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](67, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](68, " Treets ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](68, "a", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](69, " Juicy Fruit ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](70, " Twix ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](71, " Life Savers ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](72, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "a", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, " M&M\u2019S ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "p");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, "Other products include those manufactured by the Wrigley Company");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](76, "a", 16);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "div", 1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](74, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](75, " 5 (gum) ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](77, " Maltesers ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](76, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](77, " Airwaves ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](79, " Alpine ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](79, "a", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](80, " Mars ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](81, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](81, " Altoids ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](82, "a", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](83, " Milky Way ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](82, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](83, " Big Red ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](84, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](85, " Bubble Tape ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](85, " My M&M's ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](86, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](87, " Doublemint ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](87, "a", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](88, "Orbit");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](88, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](89, " Eclipse ");
-
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](89, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](91, " Eclipse Ice ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "a", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](91, " Skittles ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](92, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](93, " Excel ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](93, "a", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](94, " Snickers ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](94, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](95, " Extra ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](95, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](96, " Starburst ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](96, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](97, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](97, " Freedent ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "a", 22);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](99, "Twix");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](99, " Hubba Bubba ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](100, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](101, " Juicy Fruit ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](101, " Winterfresh ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](102, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](103, " Life Savers ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](103, "a", 23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](104, " Wrigley's Extra ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](105, " Lockets ");
-
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](106, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](105, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](107, " Orbit ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](108, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](109, " Ouch! ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](110, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](111, " Skittles ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](112, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](113, " Spearmint ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](114, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](115, " Starburst ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](116, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](117, " Surpass ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](118, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](119, " Rondo ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](120, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](121, " Tunes ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](122, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](123, " Wrigley's ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](124, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](125, " Winterfresh ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](106, " Wrigley's Spearmint ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
       },
-      styles: [".box[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  margin-bottom: 40px;\n}\n\n@media only screen and (max-width: 767px) {\n  .box[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    flex: 1 1 120px;\n  }\n}\n\n@media only screen and (min-width: 768px) {\n  .box[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    flex: 1 1 160px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9jb21wYW55L21hcnMvbWFycy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbWFpbi9jb21wYW55L21hcnMvbWFycy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBRTtFQUNFLGFBQUE7RUFDQSxlQUFBO0VBQ0EsbUJBQUE7QUNDSjs7QURFRTtFQUNJO0lBQ0ksZUFBQTtFQ0NSO0FBQ0Y7O0FERUU7RUFDSTtJQUNJLGVBQUE7RUNBUjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvbWFpbi9jb21wYW55L21hcnMvbWFycy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiAgLmJveCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG4gICAgbWFyZ2luLWJvdHRvbTogNDBweDtcbiAgfVxuICBcbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjdweCkge1xuICAgICAgLmJveCA+ICoge1xuICAgICAgICAgIGZsZXg6IDEgMSAxMjBweDtcbiAgICAgIH1cbiAgfVxuICBcbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA3NjhweCkge1xuICAgICAgLmJveCA+ICoge1xuICAgICAgICAgIGZsZXg6IDEgMSAxNjBweDtcbiAgICAgIH1cbiAgfVxuICAiLCIuYm94IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBtYXJnaW4tYm90dG9tOiA0MHB4O1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2N3B4KSB7XG4gIC5ib3ggPiAqIHtcbiAgICBmbGV4OiAxIDEgMTIwcHg7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgLmJveCA+ICoge1xuICAgIGZsZXg6IDEgMSAxNjBweDtcbiAgfVxufSJdfQ== */"]
+      directives: [_core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_1__["YoutubePlayerComponent"]],
+      styles: [".box[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  margin-bottom: 40px;\n}\n\n@media only screen and (max-width: 767px) {\n  .box[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    flex: 1 1 160px;\n  }\n}\n\n@media only screen and (min-width: 768px) {\n  .box[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    flex: 1 1 180px;\n  }\n}\n\n.candy-name[_ngcontent-%COMP%] {\n  font-weight: 600;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9jb21wYW55L21hcnMvbWFycy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvbWFpbi9jb21wYW55L21hcnMvbWFycy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBRTtFQUNFLGFBQUE7RUFDQSxlQUFBO0VBQ0EsbUJBQUE7QUNDSjs7QURFRTtFQUNJO0lBQ0ksZUFBQTtFQ0NSO0FBQ0Y7O0FERUU7RUFDSTtJQUNJLGVBQUE7RUNBUjtBQUNGOztBREdFO0VBQ0ksZ0JBQUE7QUNETiIsImZpbGUiOiJzcmMvYXBwL21haW4vY29tcGFueS9tYXJzL21hcnMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgIC5ib3gge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC13cmFwOiB3cmFwO1xuICAgIG1hcmdpbi1ib3R0b206IDQwcHg7XG4gIH1cbiAgXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY3cHgpIHtcbiAgICAgIC5ib3ggPiAqIHtcbiAgICAgICAgICBmbGV4OiAxIDEgMTYwcHg7XG4gICAgICB9XG4gIH1cbiAgXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgICAgIC5ib3ggPiAqIHtcbiAgICAgICAgICBmbGV4OiAxIDEgMTgwcHg7XG4gICAgICB9XG4gIH1cbiAgXG4gIC5jYW5keS1uYW1lIHtcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIH0iLCIuYm94IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBtYXJnaW4tYm90dG9tOiA0MHB4O1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2N3B4KSB7XG4gIC5ib3ggPiAqIHtcbiAgICBmbGV4OiAxIDEgMTYwcHg7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgLmJveCA+ICoge1xuICAgIGZsZXg6IDEgMSAxODBweDtcbiAgfVxufVxuLmNhbmR5LW5hbWUge1xuICBmb250LXdlaWdodDogNjAwO1xufSJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -38011,9 +38512,478 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
           templateUrl: './mars.component.html',
           styleUrls: ['./mars.component.scss']
         }]
-      }], function () {
-        return [];
-      }, null);
+      }], null, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/main/company/meiji/meiji.component.ts":
+  /*!*******************************************************!*\
+    !*** ./src/app/main/company/meiji/meiji.component.ts ***!
+    \*******************************************************/
+
+  /*! exports provided: MeijiComponent */
+
+  /***/
+  function srcAppMainCompanyMeijiMeijiComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MeijiComponent", function () {
+      return MeijiComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var MeijiComponent = function MeijiComponent() {
+      _classCallCheck2(this, MeijiComponent);
+    };
+
+    MeijiComponent.ɵfac = function MeijiComponent_Factory(t) {
+      return new (t || MeijiComponent)();
+    };
+
+    MeijiComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: MeijiComponent,
+      selectors: [["candy-meiji"]],
+      decls: 13,
+      vars: 0,
+      template: function MeijiComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Meiji Holdings Company, Ltd is a Japanese holding company that was established on April 1, 2009, after the stock transfer from Meiji Seika and Meiji Dairies. It is the 4th largest confectionery company in the world.\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " Meiji's Group priorities\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "R&D");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " - In order to grow, Meiji's aims to satisfy evolving consumer tastes and meets the challenges of a diverse range of societal requirements. ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "span");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Quality");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, " - Trust is built on maintaining a sterling reputation over generations. ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      },
+      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21haW4vY29tcGFueS9tZWlqaS9tZWlqaS5jb21wb25lbnQuc2NzcyJ9 */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MeijiComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'candy-meiji',
+          templateUrl: './meiji.component.html',
+          styleUrls: ['./meiji.component.scss']
+        }]
+      }], null, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/main/company/mondelez/mondelez.component.ts":
+  /*!*************************************************************!*\
+    !*** ./src/app/main/company/mondelez/mondelez.component.ts ***!
+    \*************************************************************/
+
+  /*! exports provided: MondelezComponent */
+
+  /***/
+  function srcAppMainCompanyMondelezMondelezComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MondelezComponent", function () {
+      return MondelezComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var MondelezComponent = function MondelezComponent() {
+      _classCallCheck2(this, MondelezComponent);
+    };
+
+    MondelezComponent.ɵfac = function MondelezComponent_Factory(t) {
+      return new (t || MondelezComponent)();
+    };
+
+    MondelezComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: MondelezComponent,
+      selectors: [["candy-mondelez"]],
+      decls: 81,
+      vars: 0,
+      consts: [[1, "brand-line"], [1, "box"]],
+      template: function MondelezComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Mondelez International is one of the world's largest snack companies with global net revenues of $25.9 billion and net earnings of $3.4 billion in 2018. They sell mostly snacks including biscuits, chocolate, gum, and candy as well as various cheese and grocery and powdered beverage products.\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " Mondelez's mission is to empower people to snack right. They aim to provide the right snack at the right time, made the right way. They produce high-quality snacks made with sustainable ingredients that consumers can feel good about.\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " Mondelez International Brands are distributed in over 150 countries:\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "5 Star");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Alphen Gold");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Barni");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Belvita");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Bournvita");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Cadbury");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Cadbury");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "Chips Ahoy!");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Clorets");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Club Social");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "C\xF4te d'Or");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Enjoy Life Foods");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "Freia");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "Halls");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "Honey Maid");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "Kinh Do");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Lacta");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "LU");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, "Marabou");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, "Maynards Bassett's");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, "Milka");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, "Oreo");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](52, "Perfect Snacks");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, "Philadelphia");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, "Prince");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, "Ritz");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, "Royal");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, "Sour Patch Kids");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](64, "Stride");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](65, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](66, "Tang");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](67, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](68, "Tate's Bake Shop");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](70, "Tiger");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, "Toblerone");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, "Trident");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](76, "Triscuit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](77, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](78, "TUC");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](79, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](80, "Wheat Thins");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      },
+      styles: [".brand-line[_ngcontent-%COMP%] {\n  font-weight: 600;\n}\n\n.box[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  margin-bottom: 20px;\n}\n\n@media only screen and (max-width: 767px) {\n  .box[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    flex: 1 1 120px;\n  }\n}\n\n@media only screen and (min-width: 768px) {\n  .box[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    flex: 1 1 160px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9jb21wYW55L21vbmRlbGV6L21vbmRlbGV6LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9tYWluL2NvbXBhbnkvbW9uZGVsZXovbW9uZGVsZXouY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxnQkFBQTtBQ0NKOztBRENBO0VBQ0ksYUFBQTtFQUNBLGVBQUE7RUFDQSxtQkFBQTtBQ0VKOztBRENFO0VBQ0k7SUFDSSxlQUFBO0VDRVI7QUFDRjs7QURDRTtFQUNJO0lBQ0ksZUFBQTtFQ0NSO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9tYWluL2NvbXBhbnkvbW9uZGVsZXovbW9uZGVsZXouY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnJhbmQtbGluZSB7XG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcbn1cbi5ib3gge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC13cmFwOiB3cmFwO1xuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XG4gIH1cbiAgXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY3cHgpIHtcbiAgICAgIC5ib3ggPiAqIHtcbiAgICAgICAgICBmbGV4OiAxIDEgMTIwcHg7XG4gICAgICB9XG4gIH1cbiAgXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgICAgIC5ib3ggPiAqIHtcbiAgICAgICAgICBmbGV4OiAxIDEgMTYwcHg7XG4gICAgICB9XG4gIH1cbiAgIiwiLmJyYW5kLWxpbmUge1xuICBmb250LXdlaWdodDogNjAwO1xufVxuXG4uYm94IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2N3B4KSB7XG4gIC5ib3ggPiAqIHtcbiAgICBmbGV4OiAxIDEgMTIwcHg7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgLmJveCA+ICoge1xuICAgIGZsZXg6IDEgMSAxNjBweDtcbiAgfVxufSJdfQ== */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MondelezComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'candy-mondelez',
+          templateUrl: './mondelez.component.html',
+          styleUrls: ['./mondelez.component.scss']
+        }]
+      }], null, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/main/company/nestle/nestle.component.ts":
+  /*!*********************************************************!*\
+    !*** ./src/app/main/company/nestle/nestle.component.ts ***!
+    \*********************************************************/
+
+  /*! exports provided: NestleComponent */
+
+  /***/
+  function srcAppMainCompanyNestleNestleComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NestleComponent", function () {
+      return NestleComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var NestleComponent = function NestleComponent() {
+      _classCallCheck2(this, NestleComponent);
+    };
+
+    NestleComponent.ɵfac = function NestleComponent_Factory(t) {
+      return new (t || NestleComponent)();
+    };
+
+    NestleComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: NestleComponent,
+      selectors: [["candy-nestle"]],
+      decls: 2,
+      vars: 0,
+      template: function NestleComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Need's Work\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      },
+      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21haW4vY29tcGFueS9uZXN0bGUvbmVzdGxlLmNvbXBvbmVudC5zY3NzIn0= */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NestleComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'candy-nestle',
+          templateUrl: './nestle.component.html',
+          styleUrls: ['./nestle.component.scss']
+        }]
+      }], null, null);
     })();
     /***/
 
@@ -38056,9 +39026,9 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
     FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: FooterComponent,
       selectors: [["candy-footer"]],
-      decls: 26,
+      decls: 48,
       vars: 0,
-      consts: [[1, "footer_dark", "background_bg", "overlay_bg_80"], [1, "footer_top"], [1, "container"], [1, "row"], [1, "col-xl-4", "offset-xl-1", "col-md-6", "col-sm-12"], [1, "widget"], [1, "widget_title"], [1, "contact_info", "contact_info_light"], [1, "fas", "fa-envelope"], ["href", "mailto:asherscandybuds@gmail.com"], [1, "fas", "fa-phone"], [1, "col-xl-4", "offset-xl-2", "col-md-6", "col-sm-12"], [1, "bottom_footer", "border-top-tran"], [1, "row", "align-items-center"], [1, "col-md-6"], [1, "copyright", "m-md-0", "text-center", "text-md-left"], ["href", "index.html", 1, "text_default"]],
+      consts: [[1, "footer_dark", "background_bg", "overlay_bg_80"], [1, "footer_top"], [1, "container"], [1, "row"], [1, "col-xl-4", "offset-xl-1", "col-md-6", "col-sm-12"], [1, "widget"], [1, "widget_title"], [1, "contact_info", "contact_info_light"], [1, "fas", "fa-envelope"], ["href", "mailto:asherscandybuds@gmail.com"], [1, "fas", "fa-phone"], [1, "col-xl-4", "offset-xl-2", "col-md-6", "col-sm-12"], [1, "widget_social", "social_icons", "rounded_social"], ["href", "#", 1, "sc_facebook"], [1, "fab", "fa-facebook"], ["href", "#", 1, "sc_instagram"], [1, "fab", "fa-instagram"], ["href", "#", 1, "sc_linkedin"], [1, "fab", "fa-linkedin"], ["href", "#", 1, "sc_pinterest"], [1, "fab", "fa-pinterest"], ["href", "#", 1, "sc_twitter"], [1, "fab", "fa-twitter"], ["href", "#", 1, "sc_youtube"], [1, "fab", "fa-youtube"], [1, "bottom_footer", "border-top-tran"], [1, "row", "align-items-center"], [1, "col-md-6"], [1, "copyright", "m-md-0", "text-center", "text-md-left"], ["href", "index.html", 1, "text_default"]],
       template: function FooterComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "footer", 0);
@@ -38111,7 +39081,73 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "div", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "h6", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Follow us");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "ul", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "i", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "i", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "a", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "i", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "a", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "i", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "a", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "i", 22);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "a", 23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "i", 24);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -38119,21 +39155,31 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "p", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, " \xA9 2020 All Rights Reserved By ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "a", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "EdgeShock LLC");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "div", 26);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div", 27);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "p", 28);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, " \xA9 2020 All Rights Reserved By ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "a", 29);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, "EdgeShock LLC");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -38223,9 +39269,9 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
     HeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: HeaderComponent,
       selectors: [["candy-header"]],
-      decls: 11,
+      decls: 31,
       vars: 2,
-      consts: [[1, "header_wrap", "dark_skin", "fixed-top"], [1, "top-header", "bg_dark", "light_skin"], [1, "container"], [1, "row", "align-items-center"], [1, "col-md-7"], [1, "col-md-5"], [1, "navbar", "navbar-expand-lg"], [1, "navbar-brand", "brand-name", 3, "routerLink"], [1, "mt-0"]],
+      consts: [[1, "header_wrap", "dark_skin", "fixed-top"], [1, "top-header", "bg_dark", "light_skin"], [1, "container"], [1, "row", "align-items-center"], [1, "col-md-7"], [1, "col-md-5"], [1, "d-flex", "align-items-center", "justify-content-center", "justify-content-md-end"], [1, "social_icons", "social_white"], ["href", "#"], [1, "fab", "fa-facebook"], [1, "fab", "fa-instagram"], [1, "fab", "fa-linkedin"], [1, "fab", "fa-pinterest"], [1, "fab", "fa-twitter"], [1, "fab", "fa-youtube"], [1, "navbar", "navbar-expand-lg"], [1, "navbar-brand", "brand-name", 3, "routerLink"], [1, "mt-0"]],
       template: function HeaderComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "header", 0);
@@ -38238,7 +39284,67 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "div", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "ul", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "i", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "i", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "a", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "i", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "a", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "i", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "a", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "i", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "a", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "i", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -38246,13 +39352,7 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 2);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "nav", 6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "a", 7);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " Asher's CandyBuds ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -38262,11 +39362,27 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "hr", 8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "nav", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "a", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, " Asher's CandyBuds ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "hr", 17);
         }
 
         if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](28);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](1, _c0));
         }
@@ -38563,55 +39679,43 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
     /* harmony import */
 
 
-    var ngx_youtube_player__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ngx-youtube-player */
-    "./node_modules/ngx-youtube-player/__ivy_ngcc__/fesm2015/ngx-youtube-player.js");
-    /* harmony import */
-
-
-    var _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ../../core/components/youtube-player/youtube-player.component */
-    "./src/app/core/components/youtube-player/youtube-player.component.ts");
-    /* harmony import */
-
-
-    var _core_core_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _core_core_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../../core/core.module */
     "./src/app/core/core.module.ts");
     /* harmony import */
 
 
-    var _blog_components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _blog_components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../blog/components/about-me/about-me.component */
     "./src/app/main/blog/components/about-me/about-me.component.ts");
     /* harmony import */
 
 
-    var _blog_components_subscribe_email_subscribe_email_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _blog_components_subscribe_email_subscribe_email_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ../blog/components/subscribe-email/subscribe-email.component */
     "./src/app/main/blog/components/subscribe-email/subscribe-email.component.ts");
     /* harmony import */
 
 
-    var _footer_footer_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./footer/footer.component */
     "./src/app/main/layout/footer/footer.component.ts");
     /* harmony import */
 
 
-    var _header_header_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _header_header_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./header/header.component */
     "./src/app/main/layout/header/header.component.ts");
     /* harmony import */
 
 
-    var _layout_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _layout_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ./layout-routing.module */
     "./src/app/main/layout/layout-routing.module.ts");
     /* harmony import */
 
 
-    var _layout_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _layout_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./layout.component */
     "./src/app/main/layout/layout.component.ts");
 
@@ -38626,13 +39730,13 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
       factory: function LayoutModule_Factory(t) {
         return new (t || LayoutModule)();
       },
-      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"], _layout_routing_module__WEBPACK_IMPORTED_MODULE_10__["LayoutRoutingModule"], _core_core_module__WEBPACK_IMPORTED_MODULE_5__["CoreModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], ngx_youtube_player__WEBPACK_IMPORTED_MODULE_3__["NgxYoutubePlayerModule"].forRoot()]]
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"], _layout_routing_module__WEBPACK_IMPORTED_MODULE_8__["LayoutRoutingModule"], _core_core_module__WEBPACK_IMPORTED_MODULE_3__["CoreModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"]]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](LayoutModule, {
-        declarations: [_layout_component__WEBPACK_IMPORTED_MODULE_11__["LayoutComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_8__["FooterComponent"], _blog_components_subscribe_email_subscribe_email_component__WEBPACK_IMPORTED_MODULE_7__["SubscribeEmailComponent"], _blog_components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_6__["AboutMeComponent"], _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_4__["YoutubePlayerComponent"]],
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"], _layout_routing_module__WEBPACK_IMPORTED_MODULE_10__["LayoutRoutingModule"], _core_core_module__WEBPACK_IMPORTED_MODULE_5__["CoreModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], ngx_youtube_player__WEBPACK_IMPORTED_MODULE_3__["NgxYoutubePlayerModule"]]
+        declarations: [_layout_component__WEBPACK_IMPORTED_MODULE_9__["LayoutComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_7__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _blog_components_subscribe_email_subscribe_email_component__WEBPACK_IMPORTED_MODULE_5__["SubscribeEmailComponent"], _blog_components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_4__["AboutMeComponent"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"], _layout_routing_module__WEBPACK_IMPORTED_MODULE_8__["LayoutRoutingModule"], _core_core_module__WEBPACK_IMPORTED_MODULE_3__["CoreModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"]]
       });
     })();
     /*@__PURE__*/
@@ -38642,8 +39746,8 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](LayoutModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"], _layout_routing_module__WEBPACK_IMPORTED_MODULE_10__["LayoutRoutingModule"], _core_core_module__WEBPACK_IMPORTED_MODULE_5__["CoreModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], ngx_youtube_player__WEBPACK_IMPORTED_MODULE_3__["NgxYoutubePlayerModule"].forRoot()],
-          declarations: [_layout_component__WEBPACK_IMPORTED_MODULE_11__["LayoutComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_8__["FooterComponent"], _blog_components_subscribe_email_subscribe_email_component__WEBPACK_IMPORTED_MODULE_7__["SubscribeEmailComponent"], _blog_components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_6__["AboutMeComponent"], _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_4__["YoutubePlayerComponent"]]
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"], _layout_routing_module__WEBPACK_IMPORTED_MODULE_8__["LayoutRoutingModule"], _core_core_module__WEBPACK_IMPORTED_MODULE_3__["CoreModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"]],
+          declarations: [_layout_component__WEBPACK_IMPORTED_MODULE_9__["LayoutComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_7__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _blog_components_subscribe_email_subscribe_email_component__WEBPACK_IMPORTED_MODULE_5__["SubscribeEmailComponent"], _blog_components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_4__["AboutMeComponent"]]
         }]
       }], null, null);
     })();

@@ -880,31 +880,37 @@ const Articles = [
     {
         date: 'April 14, 2018',
         description: `Dieting is hard, especailly when you need to
-    restrain yourself from all the food and snacks you enjoy. We
-    have alternatives that will work!`,
-        image: 'assets/photoshop/lots-of-candy.jpg',
-        header: 'Top 25 Candy Companies in 2020',
-        link: 'candy-for-a-keto-diet',
+    restrain yourself from all the sugary treats you enjoy.
+    I've put together way to still satisfy your cravings without kicking you out of ketosis.`,
+        image: 'assets/photoshop/article-cover/keto-candy-1.jpg',
+        header: 'Candy for a Keto Diet',
+        link: 'candy-keto-diet',
+    },
+    {
+        date: 'April 14, 2018',
+        description: `Welcome to my list of the World's Top Candy Companies. The companies
+    are ranked based on the annual net sales.`,
+        image: 'assets/photoshop/article-cover/lots-of-candy.jpg',
+        header: 'Top 10 Candy Companies in 2020',
+        link: 'top-10-candy-companies',
     },
     {
         date: 'April 14, 2018',
         description: `A new sold out sour candy? Whattt?
-    Could there really be sour candy that actually delivers?
-    Or is it just is over-hyped?`,
-        image: 'assets/images/sour-strips/retail-group-image-update.jpg',
-        // image: 'assets/photoshop/lots-of-candy.jpg',
+                      Could there really be sour candy that actually delivers?
+                      Or is it just is over-hyped?`,
+        image: 'assets/photoshop/article-cover/sour-strips-1.jpg',
         header: 'My Journey into Sour Strips',
         link: 'my-journey-into-sour-strips',
     },
     {
         date: 'April 14, 2018',
-        description: `Dieting is hard, especailly when you need to
-    restrain yourself from all the food and snacks you enjoy. We
-    have alternatives that will work!`,
-        image: 'assets/imgs/candy/choco-updated.jpg',
-        header: 'Snacking for a keto diet',
-        link: 'candy-for-a-keto-diet',
-    }
+        description: `Interest in entrepreneurship has really taken off in the last decade.
+    So what's changed in the candy development landscape?`,
+        image: 'assets/photoshop/article-cover/entrepreneur.jpg',
+        header: 'Candy Entrepreneurship',
+        link: 'candy-entrepreneur',
+    },
 ];
 
 
@@ -923,8 +929,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var _blog_blog_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../blog/blog.component */ "./src/app/main/blog/blog.component.ts");
-/* harmony import */ var _pages_sour_strips_discovery_sour_strips_discovery_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/sour-strips-discovery/sour-strips-discovery.component */ "./src/app/main/blog/pages/sour-strips-discovery/sour-strips-discovery.component.ts");
-/* harmony import */ var _pages_top_25_top_25_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/top-25/top-25.component */ "./src/app/main/blog/pages/top-25/top-25.component.ts");
+/* harmony import */ var _entrepreneur_entrepreneur_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./entrepreneur/entrepreneur.component */ "./src/app/main/blog/entrepreneur/entrepreneur.component.ts");
+/* harmony import */ var _pages_keto_diet_keto_diet_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/keto-diet/keto-diet.component */ "./src/app/main/blog/pages/keto-diet/keto-diet.component.ts");
+/* harmony import */ var _pages_sour_strips_discovery_sour_strips_discovery_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/sour-strips-discovery/sour-strips-discovery.component */ "./src/app/main/blog/pages/sour-strips-discovery/sour-strips-discovery.component.ts");
+/* harmony import */ var _pages_top_25_top_25_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/top-25/top-25.component */ "./src/app/main/blog/pages/top-25/top-25.component.ts");
+
+
 
 
 
@@ -939,12 +949,20 @@ const routes = [
     },
     {
         path: 'my-journey-into-sour-strips',
-        component: _pages_sour_strips_discovery_sour_strips_discovery_component__WEBPACK_IMPORTED_MODULE_3__["SourStripsDiscoveryComponent"],
+        component: _pages_sour_strips_discovery_sour_strips_discovery_component__WEBPACK_IMPORTED_MODULE_5__["SourStripsDiscoveryComponent"],
     },
     {
-        path: 'candy-for-a-keto-diet',
-        component: _pages_top_25_top_25_component__WEBPACK_IMPORTED_MODULE_4__["Top25Component"],
-    }
+        path: 'top-10-candy-companies',
+        component: _pages_top_25_top_25_component__WEBPACK_IMPORTED_MODULE_6__["Top25Component"],
+    },
+    {
+        path: 'candy-keto-diet',
+        component: _pages_keto_diet_keto_diet_component__WEBPACK_IMPORTED_MODULE_4__["KetoDietComponent"],
+    },
+    {
+        path: 'candy-entrepreneur',
+        component: _entrepreneur_entrepreneur_component__WEBPACK_IMPORTED_MODULE_3__["EntrepreneurComponent"],
+    },
 ];
 class BlogRoutingModule {
 }
@@ -1019,13 +1037,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/__ivy_ngcc__/dist/ngx-pagination.js");
-/* harmony import */ var _blog_components_article_overview_article_overview_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../blog/components/article-overview/article-overview.component */ "./src/app/main/blog/components/article-overview/article-overview.component.ts");
-/* harmony import */ var _company_company_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../company/company.component */ "./src/app/main/company/company.component.ts");
-/* harmony import */ var _blog_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blog-routing.module */ "./src/app/main/blog/blog-routing.module.ts");
-/* harmony import */ var _blog_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blog.component */ "./src/app/main/blog/blog.component.ts");
-/* harmony import */ var _pages_sour_strips_discovery_sour_strips_discovery_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/sour-strips-discovery/sour-strips-discovery.component */ "./src/app/main/blog/pages/sour-strips-discovery/sour-strips-discovery.component.ts");
-/* harmony import */ var _pages_top_25_top_25_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/top-25/top-25.component */ "./src/app/main/blog/pages/top-25/top-25.component.ts");
+/* harmony import */ var ngx_youtube_player__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-youtube-player */ "./node_modules/ngx-youtube-player/__ivy_ngcc__/fesm2015/ngx-youtube-player.js");
+/* harmony import */ var _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../core/components/youtube-player/youtube-player.component */ "./src/app/core/components/youtube-player/youtube-player.component.ts");
+/* harmony import */ var _blog_components_article_overview_article_overview_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../blog/components/article-overview/article-overview.component */ "./src/app/main/blog/components/article-overview/article-overview.component.ts");
+/* harmony import */ var _company_company_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../company/company.component */ "./src/app/main/company/company.component.ts");
+/* harmony import */ var _company_ferrero_ferrero_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../company/ferrero/ferrero.component */ "./src/app/main/company/ferrero/ferrero.component.ts");
+/* harmony import */ var _company_hersheys_hersheys_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../company/hersheys/hersheys.component */ "./src/app/main/company/hersheys/hersheys.component.ts");
 /* harmony import */ var _company_mars_mars_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../company/mars/mars.component */ "./src/app/main/company/mars/mars.component.ts");
+/* harmony import */ var _company_meiji_meiji_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../company/meiji/meiji.component */ "./src/app/main/company/meiji/meiji.component.ts");
+/* harmony import */ var _company_mondelez_mondelez_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../company/mondelez/mondelez.component */ "./src/app/main/company/mondelez/mondelez.component.ts");
+/* harmony import */ var _company_nestle_nestle_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../company/nestle/nestle.component */ "./src/app/main/company/nestle/nestle.component.ts");
+/* harmony import */ var _blog_routing_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blog-routing.module */ "./src/app/main/blog/blog-routing.module.ts");
+/* harmony import */ var _blog_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./blog.component */ "./src/app/main/blog/blog.component.ts");
+/* harmony import */ var _entrepreneur_entrepreneur_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./entrepreneur/entrepreneur.component */ "./src/app/main/blog/entrepreneur/entrepreneur.component.ts");
+/* harmony import */ var _pages_keto_diet_keto_diet_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/keto-diet/keto-diet.component */ "./src/app/main/blog/pages/keto-diet/keto-diet.component.ts");
+/* harmony import */ var _pages_sour_strips_discovery_sour_strips_discovery_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/sour-strips-discovery/sour-strips-discovery.component */ "./src/app/main/blog/pages/sour-strips-discovery/sour-strips-discovery.component.ts");
+/* harmony import */ var _pages_top_25_top_25_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/top-25/top-25.component */ "./src/app/main/blog/pages/top-25/top-25.component.ts");
 
 
  // <-- import the module
@@ -1037,40 +1064,74 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+const pages = [
+    _entrepreneur_entrepreneur_component__WEBPACK_IMPORTED_MODULE_15__["EntrepreneurComponent"],
+    _pages_keto_diet_keto_diet_component__WEBPACK_IMPORTED_MODULE_16__["KetoDietComponent"],
+    _pages_sour_strips_discovery_sour_strips_discovery_component__WEBPACK_IMPORTED_MODULE_17__["SourStripsDiscoveryComponent"],
+    _pages_top_25_top_25_component__WEBPACK_IMPORTED_MODULE_18__["Top25Component"]
+];
 class BlogModule {
 }
 BlogModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: BlogModule });
 BlogModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function BlogModule_Factory(t) { return new (t || BlogModule)(); }, imports: [[
             _angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
-            _blog_routing_module__WEBPACK_IMPORTED_MODULE_5__["BlogRoutingModule"],
+            _blog_routing_module__WEBPACK_IMPORTED_MODULE_13__["BlogRoutingModule"],
             ngx_pagination__WEBPACK_IMPORTED_MODULE_2__["NgxPaginationModule"],
+            // CoreModule,
+            // FormsModule,
+            // ReactiveFormsModule,
+            ngx_youtube_player__WEBPACK_IMPORTED_MODULE_3__["NgxYoutubePlayerModule"].forRoot(),
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](BlogModule, { declarations: [_blog_component__WEBPACK_IMPORTED_MODULE_6__["BlogComponent"],
-        _pages_sour_strips_discovery_sour_strips_discovery_component__WEBPACK_IMPORTED_MODULE_7__["SourStripsDiscoveryComponent"],
-        _pages_top_25_top_25_component__WEBPACK_IMPORTED_MODULE_8__["Top25Component"],
-        _blog_components_article_overview_article_overview_component__WEBPACK_IMPORTED_MODULE_3__["ArticleOverviewComponent"],
-        _company_company_component__WEBPACK_IMPORTED_MODULE_4__["CompanyComponent"],
-        _company_mars_mars_component__WEBPACK_IMPORTED_MODULE_9__["MarsComponent"]
-        // YoutubePlayerComponent,
-    ], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
-        _blog_routing_module__WEBPACK_IMPORTED_MODULE_5__["BlogRoutingModule"],
-        ngx_pagination__WEBPACK_IMPORTED_MODULE_2__["NgxPaginationModule"]] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](BlogModule, { declarations: [_entrepreneur_entrepreneur_component__WEBPACK_IMPORTED_MODULE_15__["EntrepreneurComponent"],
+        _pages_keto_diet_keto_diet_component__WEBPACK_IMPORTED_MODULE_16__["KetoDietComponent"],
+        _pages_sour_strips_discovery_sour_strips_discovery_component__WEBPACK_IMPORTED_MODULE_17__["SourStripsDiscoveryComponent"],
+        _pages_top_25_top_25_component__WEBPACK_IMPORTED_MODULE_18__["Top25Component"],
+        _blog_component__WEBPACK_IMPORTED_MODULE_14__["BlogComponent"],
+        _blog_components_article_overview_article_overview_component__WEBPACK_IMPORTED_MODULE_5__["ArticleOverviewComponent"],
+        _company_company_component__WEBPACK_IMPORTED_MODULE_6__["CompanyComponent"],
+        _company_mars_mars_component__WEBPACK_IMPORTED_MODULE_9__["MarsComponent"],
+        _company_ferrero_ferrero_component__WEBPACK_IMPORTED_MODULE_7__["FerreroComponent"],
+        _company_mondelez_mondelez_component__WEBPACK_IMPORTED_MODULE_11__["MondelezComponent"],
+        _company_meiji_meiji_component__WEBPACK_IMPORTED_MODULE_10__["MeijiComponent"],
+        _company_hersheys_hersheys_component__WEBPACK_IMPORTED_MODULE_8__["HersheysComponent"],
+        _company_nestle_nestle_component__WEBPACK_IMPORTED_MODULE_12__["NestleComponent"],
+        _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_4__["YoutubePlayerComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
+        _blog_routing_module__WEBPACK_IMPORTED_MODULE_13__["BlogRoutingModule"],
+        ngx_pagination__WEBPACK_IMPORTED_MODULE_2__["NgxPaginationModule"], ngx_youtube_player__WEBPACK_IMPORTED_MODULE_3__["NgxYoutubePlayerModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BlogModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
                 imports: [
                     _angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
-                    _blog_routing_module__WEBPACK_IMPORTED_MODULE_5__["BlogRoutingModule"],
+                    _blog_routing_module__WEBPACK_IMPORTED_MODULE_13__["BlogRoutingModule"],
                     ngx_pagination__WEBPACK_IMPORTED_MODULE_2__["NgxPaginationModule"],
+                    // CoreModule,
+                    // FormsModule,
+                    // ReactiveFormsModule,
+                    ngx_youtube_player__WEBPACK_IMPORTED_MODULE_3__["NgxYoutubePlayerModule"].forRoot(),
                 ],
                 declarations: [
-                    _blog_component__WEBPACK_IMPORTED_MODULE_6__["BlogComponent"],
-                    _pages_sour_strips_discovery_sour_strips_discovery_component__WEBPACK_IMPORTED_MODULE_7__["SourStripsDiscoveryComponent"],
-                    _pages_top_25_top_25_component__WEBPACK_IMPORTED_MODULE_8__["Top25Component"],
-                    _blog_components_article_overview_article_overview_component__WEBPACK_IMPORTED_MODULE_3__["ArticleOverviewComponent"],
-                    _company_company_component__WEBPACK_IMPORTED_MODULE_4__["CompanyComponent"],
-                    _company_mars_mars_component__WEBPACK_IMPORTED_MODULE_9__["MarsComponent"]
-                    // YoutubePlayerComponent,
+                    ...pages,
+                    _blog_component__WEBPACK_IMPORTED_MODULE_14__["BlogComponent"],
+                    _blog_components_article_overview_article_overview_component__WEBPACK_IMPORTED_MODULE_5__["ArticleOverviewComponent"],
+                    _company_company_component__WEBPACK_IMPORTED_MODULE_6__["CompanyComponent"],
+                    _company_mars_mars_component__WEBPACK_IMPORTED_MODULE_9__["MarsComponent"],
+                    _company_ferrero_ferrero_component__WEBPACK_IMPORTED_MODULE_7__["FerreroComponent"],
+                    _company_mondelez_mondelez_component__WEBPACK_IMPORTED_MODULE_11__["MondelezComponent"],
+                    _company_meiji_meiji_component__WEBPACK_IMPORTED_MODULE_10__["MeijiComponent"],
+                    _company_hersheys_hersheys_component__WEBPACK_IMPORTED_MODULE_8__["HersheysComponent"],
+                    _company_nestle_nestle_component__WEBPACK_IMPORTED_MODULE_12__["NestleComponent"],
+                    _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_4__["YoutubePlayerComponent"],
                 ],
             }]
     }], null, null); })();
@@ -1159,7 +1220,7 @@ function ArticleOverviewComponent_div_0_Template(rf, ctx) { if (rf & 1) {
 class ArticleOverviewComponent {
 }
 ArticleOverviewComponent.ɵfac = function ArticleOverviewComponent_Factory(t) { return new (t || ArticleOverviewComponent)(); };
-ArticleOverviewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ArticleOverviewComponent, selectors: [["candy-article-overview"]], inputs: { articles: "articles" }, decls: 1, vars: 1, consts: [[4, "ngIf"], ["class", "blog_post", 4, "ngFor", "ngForOf"], [1, "blog_post"], [1, "blog_img"], ["alt", "blog_img1", 3, "src"], [1, "blog_content"], [1, "blog_text"], [1, "blog_heading"], [3, "routerLink"], [1, "blog_meta"], [1, "fas", "fa-calendar"], [1, "btn", "btn-default", "btn-sm", 3, "routerLink"], [1, "fas", "fa-play"]], template: function ArticleOverviewComponent_Template(rf, ctx) { if (rf & 1) {
+ArticleOverviewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ArticleOverviewComponent, selectors: [["candy-article-overview"]], inputs: { articles: "articles" }, decls: 1, vars: 1, consts: [[4, "ngIf"], ["class", "blog_post ", 4, "ngFor", "ngForOf"], [1, "blog_post"], [1, "blog_img"], ["alt", "blog_img1", 3, "src"], [1, "blog_content"], [1, "blog_text"], [1, "blog_heading"], [3, "routerLink"], [1, "blog_meta"], [1, "fas", "fa-calendar"], [1, "btn", "btn-default", "btn-sm", 3, "routerLink"], [1, "fas", "fa-play"]], template: function ArticleOverviewComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ArticleOverviewComponent_div_0_Template, 2, 1, "div", 0);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.articles);
@@ -1174,6 +1235,404 @@ ArticleOverviewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ�
     }], null, { articles: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }] }); })();
+
+
+/***/ }),
+
+/***/ "./src/app/main/blog/entrepreneur/entrepreneur.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/main/blog/entrepreneur/entrepreneur.component.ts ***!
+  \******************************************************************/
+/*! exports provided: EntrepreneurComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EntrepreneurComponent", function() { return EntrepreneurComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _article_data_article_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../article-data/article-data */ "./src/app/main/blog/article-data/article-data.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../core/components/youtube-player/youtube-player.component */ "./src/app/core/components/youtube-player/youtube-player.component.ts");
+
+
+
+
+
+
+const _c0 = function () { return ["/", "my-journey-into-sour-strips"]; };
+function EntrepreneurComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "h2", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "ul", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "i", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "b");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Mars Wrigley");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " and ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "b");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Hershey's");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, " would reign supreme, leaving little to no room for the little guy, but the landscape has changed, and every year new entrepreneurs are coming to the spotlight. So what's changed? ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "img", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Well, we are living the era of the internet and social media. It's never been easier to connect with people and establish global trade in the history of the human race than it is today. Today, people can market themselves through platforms like youtube, Facebook, Instagram, Twitter, TikTok, and create a brand around themselves all for free. And this is what is allowing the little guy to compete with the big brands, or at least get their foot in the door. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "h3", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, " #Entrepreneur anyone? ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, " Just a heads up if anyone is wondering, it takes more than putting ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "b");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "#Entrepreneur");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, " in your social media bio... ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](31, "img", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, " In short, it often takes hard work and being consistent in what you do. Now I'm not going to get too technical into entrepreneurship, but I am going to take a look at some modern day candy entrepreneurs, and see what they've done differently. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "h3", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, " Powerlifter Influencer Candy Connoisseur ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, " If you guys read my last blog: ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "a", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "My Journey Into Sour Strips");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, ", it was around this point in time that I had to know who the guy behind the amazing candy was. That's when I found out about ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "a", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "Maxx Chewning");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, " and how ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "a", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, "Sour Strips");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, " came to be. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](48, "candy-youtube-player", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, " So the goal of any business to solve a problem. Maxx recognized the following problems: ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "ul");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, " A lot of sour candy just sucks... ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, " Why's the candy wet and sticky?? ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](57, "Who's approving the sour meter?");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](59, " Adults eat candy too. Why's sour candy seem to only be marketed towards children? ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61, " Is \"extreme sour\" really as sour as the manufactor can make it? ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](63, " It was at this point that Maxx started looking into starting his candy brand. He contacted several candy companies and was initially turned away as they supplied only to large brands. But Maxx continued his journey until he found a supplier that could provide candy that he liked. And that's when he came across the supplier for sour belts. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, " As soon as he tried the sour belts that the supplier sent him, at the moment he realized that sour belts were the candy he wanted to put his brand around. The candy was already perfect and addressed all the candy problems he had. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](67, " Sour belts aren't available in your local Walmart. Usually you gotta find a candy-only store to find them. He didn't reinvent candy, or create some new healthy formula candy. From there it was all about building his brand and making his candy available everywhere. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](68, "div", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "div", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](72, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "div", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](74, "h4");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](75, "Summary");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](76, "div", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](77, "ul");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](79, "Didn't re-invent candy");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](81, "Found candy that addressed current candy issues");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](82, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](83, " Built a brand around the candy and protomoted to his followers ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.article.header, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.article.date);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.article.description, " Initially it was thought that only existing candy companies like ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c0));
+} }
+class EntrepreneurComponent {
+    get article() {
+        return _article_data_article_data__WEBPACK_IMPORTED_MODULE_1__["Articles"].find((article) => {
+            return article.header === 'Candy Entrepreneurship';
+        });
+    }
+}
+EntrepreneurComponent.ɵfac = function EntrepreneurComponent_Factory(t) { return new (t || EntrepreneurComponent)(); };
+EntrepreneurComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: EntrepreneurComponent, selectors: [["candy-entrepreneur"]], decls: 1, vars: 1, consts: [[4, "ngIf"], [1, "blog_post"], [1, "blog_content"], [1, "blog_text"], [1, "blog_heading"], [1, "blog_meta"], [1, "fas", "fa-calendar"], [1, "topic-section"], ["src", "assets/photoshop/other/social-media.jpg", "alt", ""], ["src", "assets/photoshop/other/entrepreneur.jpg", "alt", ""], [3, "routerLink"], ["href", "https://www.youtube.com/channel/UCRZAa0ay5dZT71_efD-YlOg", "target", "_blank"], ["href", "https://www.sourstrips.com/"], ["id", "LvDYgSWT8F0"], [1, "row"], [1, "col-12"], [1, "p-md-5", "p-4", "bg_gray"], [1, "row", "justify-content-between", "align-items-center"], [1, "heading_s1"], [1, "ml-3"]], template: function EntrepreneurComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, EntrepreneurComponent_div_0_Template, 84, 5, "div", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.article);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"], _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_4__["YoutubePlayerComponent"]], styles: ["@charset \"UTF-8\";\n.fa-calendar[_ngcontent-%COMP%] {\n  color: #ff324d;\n  margin-right: 5px;\n}\n.blog_meta[_ngcontent-%COMP%] {\n  margin: 1% 0;\n}\n.topic-section[_ngcontent-%COMP%] {\n  margin: 5% 0;\n}\nh2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%] {\n  font-weight: 700;\n  text-transform: capitalize;\n}\np[_ngcontent-%COMP%] {\n  font-size: 16px;\n}\nimg[_ngcontent-%COMP%] {\n  max-width: 85%;\n  margin: 5% 0;\n}\na[_ngcontent-%COMP%] {\n  color: #ff324d;\n}\n.topic-section[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]::before {\n  content: \"\u2022\";\n  color: black;\n  font-size: 24px;\n  margin: 0 2%;\n}\n.topic-section[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 16px;\n}\nul[_ngcontent-%COMP%] {\n  margin: 3% 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbi9ibG9nL2VudHJlcHJlbmV1ci9lbnRyZXByZW5ldXIuY29tcG9uZW50LnNjc3MiLCIvVXNlcnMvYXNoZXIvRG9jdW1lbnRzL3Jlc3RBcGkvY2FuZHktYmxvZy9zcmMvYXBwL21haW4vYmxvZy9lbnRyZXByZW5ldXIvZW50cmVwcmVuZXVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQ0FoQjtFQUNJLGNBQUE7RUFDQSxpQkFBQTtBREVKO0FDQ0U7RUFDRSxZQUFBO0FERUo7QUNDRTtFQUNFLFlBQUE7QURFSjtBQ0NFOzs7RUFHRSxnQkFBQTtFQUNBLDBCQUFBO0FERUo7QUNDRTtFQUNFLGVBQUE7QURFSjtBQ0NFO0VBQ0UsY0FBQTtFQUNBLFlBQUE7QURFSjtBQ0NFO0VBQ0UsY0FBQTtBREVKO0FDQ0U7RUFDRSxZQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSxZQUFBO0FERUo7QUNDRTtFQUNFLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGVBQUE7QURFSjtBQ0NFO0VBQ0UsWUFBQTtBREVKIiwiZmlsZSI6InNyYy9hcHAvbWFpbi9ibG9nL2VudHJlcHJlbmV1ci9lbnRyZXByZW5ldXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAY2hhcnNldCBcIlVURi04XCI7XG4uZmEtY2FsZW5kYXIge1xuICBjb2xvcjogI2ZmMzI0ZDtcbiAgbWFyZ2luLXJpZ2h0OiA1cHg7XG59XG5cbi5ibG9nX21ldGEge1xuICBtYXJnaW46IDElIDA7XG59XG5cbi50b3BpYy1zZWN0aW9uIHtcbiAgbWFyZ2luOiA1JSAwO1xufVxuXG5oMixcbmgzLFxuaDQge1xuICBmb250LXdlaWdodDogNzAwO1xuICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbn1cblxucCB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuaW1nIHtcbiAgbWF4LXdpZHRoOiA4NSU7XG4gIG1hcmdpbjogNSUgMDtcbn1cblxuYSB7XG4gIGNvbG9yOiAjZmYzMjRkO1xufVxuXG4udG9waWMtc2VjdGlvbiB1bCBsaTo6YmVmb3JlIHtcbiAgY29udGVudDogXCLigKJcIjtcbiAgY29sb3I6IGJsYWNrO1xuICBmb250LXNpemU6IDI0cHg7XG4gIG1hcmdpbjogMCAyJTtcbn1cblxuLnRvcGljLXNlY3Rpb24gdWwgbGkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbnVsIHtcbiAgbWFyZ2luOiAzJSAwO1xufSIsIi5mYS1jYWxlbmRhciB7XG4gICAgY29sb3I6ICNmZjMyNGQ7XG4gICAgbWFyZ2luLXJpZ2h0OiA1cHg7XG4gIH1cbiAgXG4gIC5ibG9nX21ldGEge1xuICAgIG1hcmdpbjogMSUgMDtcbiAgfVxuICBcbiAgLnRvcGljLXNlY3Rpb24ge1xuICAgIG1hcmdpbjogNSUgMDtcbiAgfVxuICBcbiAgaDIsXG4gIGgzLFxuICBoNCB7XG4gICAgZm9udC13ZWlnaHQ6IDcwMDtcbiAgICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbiAgfVxuXG4gIHAge1xuICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgfVxuICBcbiAgaW1nIHtcbiAgICBtYXgtd2lkdGg6IDg1JTtcbiAgICBtYXJnaW46IDUlIDA7XG4gIH1cbiAgXG4gIGEge1xuICAgIGNvbG9yOiAjZmYzMjRkO1xuICB9XG5cbiAgLnRvcGljLXNlY3Rpb24gdWwgbGk6OmJlZm9yZSB7XG4gICAgY29udGVudDogXCLigKJcIjtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgZm9udC1zaXplOiAyNHB4O1xuICAgIG1hcmdpbjogMCAyJTtcbiAgfVxuICBcbiAgLnRvcGljLXNlY3Rpb24gdWwgbGkge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDE2cHg7XG4gIH1cblxuICB1bCB7XG4gICAgbWFyZ2luOiAzJSAwO1xuICB9Il19 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](EntrepreneurComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'candy-entrepreneur',
+                templateUrl: './entrepreneur.component.html',
+                styleUrls: ['./entrepreneur.component.scss'],
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/main/blog/pages/keto-diet/keto-diet.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/main/blog/pages/keto-diet/keto-diet.component.ts ***!
+  \******************************************************************/
+/*! exports provided: KetoDietComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KetoDietComponent", function() { return KetoDietComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _article_data_article_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../article-data/article-data */ "./src/app/main/blog/article-data/article-data.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../core/components/youtube-player/youtube-player.component */ "./src/app/core/components/youtube-player/youtube-player.component.ts");
+
+
+
+
+
+function KetoDietComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "h2", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "ul", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "i", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "img", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "br");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "a", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Kind Bar Display");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, " by ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, " Mike Mozart");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Licensed under ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " Attribution 2.0 Generic (CC BY 2.0)");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "br");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "h3", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, " What is Keto? ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, " A ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "a", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "keto diet");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "(short for ketogenic diet) is based on eating a low-carb, high-fat diet, with a moderate amount of protein. By reducing your carb intake and replacing it with fat, this puts your body into a metabolic state called ketosis. This allows your body to properly burn fat for energy, leading to weight loss and good energy levels for the brain. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, " So in order to figure out how to add candy to our diet, we first need to check if the desired candy has the makeup of a keto-friendly candy. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "h3");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "Dark Chocolate");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, " I find that Dark Chocolate is one of those things that people completely either love it or hate it. But if you're like me and enjoy dark chocolate regularly, this might be worth adding into your diet. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, " The build-up of ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "a", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "Dark chocolate");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, " is primarily made up of fat and sugar mixed with cocoa. Unlike milk chocolate, dark chocolate is made with little to no milk solids and contains less sugar and more cocoa. The higher the cocoa percentage in the chocolate, the less sugar it has. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](45, "img", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "h3");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, "Calculating your carbs");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](49, " It's important to ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "a", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, "calculate");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](52, " your daily carb intake when factoring dark chocolate into your diet. 1 ounce(28 grams) of dark chocolate with 70%-85% cocoa contains up to 13 grams of carbs and 3 grams of fiber, totalling about 10 grams of net carbs. Here are a few examples to give you an idea of what to expect. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, " At a low end of cocoa content(70%), ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "a", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, "Pascha Organic Bar Zero Dark Chocolate");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](57, " has 11g of fat, 13g of carbs, 0g of sugar, and 2g of protein. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](59, " On the high end, nearing almost 100%, one of the richest dark chocolate is ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "a", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61, "Excellence Cocoa 99%");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, " . This chocolate bar has 51g of fat,1g of sugar, 4.7g of carbohydratesm and 15g of protein. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "h3");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, "Home made recipes");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](67, " You won't find much keto-friendly candy at the store, but its really easy to make your keto tailored candy to go with your diet. Personally I love eating haribo gummy bears, but the 14 grams of sugar in each serving is a real let down when I'm trying to get into shape. Check out this video to learn how to make home made keto gummy candy! ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](68, "candy-youtube-player", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "h3");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](70, "Keto Candy Recipes");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "p", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, " Of course, let's not forget keto candy recipes by other great bloggers! ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "ul", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](74, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "a", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](76, " 37 Keto Candy Recipes to satisfy your sweethtooth by Bulletproof ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](77, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "a", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](79, " 36 Best low carb candy recipes by All Day I Dream About Food ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](81, "a", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](82, "Keto Butterscotch Candy by Better Than Bread Keto");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](83, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](84, "a", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](85, " Low Carb Turtle Reciple by Low Carb Maven ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](86, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](87, "a", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](88, " Keto Candy Bar Fat Bombs by How to This and That ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](89, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "a", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](91, "Buttery Walnut Toffee Candy by Joy Filled Eats");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](92, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](93, "a", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](94, "Keto Candy: 3 Ingredient Keto Almond Bark Recipe (Low Carb) by beaming baker");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](95, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](96, "a", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](97, "Divine Chocolate Dream Keto Candy Recipe by Low Carb Inspirations");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](99, "a", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](100, " 3 Ingredient Keto Chocolate Coconut Cups (Paleo, Vegan, Sugar Free) by The Big Man's World ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.article.header, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.article.date);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.article.description, " But before looking jumping straight into what sweets you can still eat, let's first discuss what constitues a keto diet. ");
+} }
+class KetoDietComponent {
+    get article() {
+        return _article_data_article_data__WEBPACK_IMPORTED_MODULE_1__["Articles"].find((article) => {
+            return article.header === 'Candy for a Keto Diet';
+        });
+    }
+}
+KetoDietComponent.ɵfac = function KetoDietComponent_Factory(t) { return new (t || KetoDietComponent)(); };
+KetoDietComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: KetoDietComponent, selectors: [["candy-keto-diet"]], decls: 1, vars: 1, consts: [[4, "ngIf"], [1, "blog_post"], [1, "blog_content"], [1, "blog_text"], [1, "blog_heading"], [1, "blog_meta"], [1, "fas", "fa-calendar"], [1, "topic-section"], [1, "licensed-img"], ["src", "assets/photoshop/candy/kind-bar.jpg", "alt", ""], ["href", "https://www.flickr.com/photos/jeepersmedia/16197555730/in/photostream/"], ["href", "https://www.flickr.com/photos/jeepersmedia/"], ["href", "https://creativecommons.org/licenses/by/2.0/"], ["href", "https://drdavinahseats.com/keto-blog/what-is-keto", "target", "_blank"], ["href", "https://www.healthline.com/nutrition/is-dark-chocolate-keto"], ["src", "assets/photoshop/candy/chocolate-1.jpg", "alt", ""], ["href", "https://www.healthline.com/nutrition/is-dark-chocolate-keto#carb-content"], ["href", "https://paschachocolate.com/collections/all/products/sugar-free-70-cacao-organic-dark-chocolate-2-8-oz-bar"], ["href", "https://www.chocolate.lindt.com/shop/chocolate-flavours/dark-chocolate/excellence-cocoa-90-1"], ["id", "KNoSYkZ3QuU"], [1, "mb-4"], [1, "other-recipes"], ["href", "https://www.bulletproof.com/recipes/keto-recipes/keto-candy-recipes-3c3g4b4c4t4m/"], ["href", "https://alldayidreamaboutfood.com/best-low-carb-keto-candy-recipes/"], ["href", "https://betterthanbreadketo.com/keto-butterscotch-candy/"], ["href", "https://www.lowcarbmaven.com/low-carb-turtle-recipe/"], ["href", "https://howtothisandthat.com/keto-candy-bar-fat-bombs/"], ["href", "https://joyfilledeats.com/buttery-walnut-toffee/"], ["href", "https://beamingbaker.com/keto-candy-3-ingredient-keto-almond-bark-recipe-low-carb/"], ["href", "https://lowcarbinspirations.com/divine-chocolate-dream-keto-candy-recipe/"], ["href", "https://thebigmansworld.com/3-ingredient-keto-chocolate-coconut-cups/"]], template: function KetoDietComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, KetoDietComponent_div_0_Template, 101, 3, "div", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.article);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _core_components_youtube_player_youtube_player_component__WEBPACK_IMPORTED_MODULE_3__["YoutubePlayerComponent"]], styles: [".fa-calendar[_ngcontent-%COMP%] {\n  color: #ff324d;\n  margin-right: 5px;\n}\n\n.blog_meta[_ngcontent-%COMP%] {\n  margin: 1% 0;\n}\n\n.topic-section[_ngcontent-%COMP%] {\n  margin: 5% 0;\n}\n\nh2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%] {\n  font-weight: 700;\n  text-transform: capitalize;\n}\n\nimg[_ngcontent-%COMP%] {\n  max-width: 85%;\n  margin: 5% 0;\n}\n\na[_ngcontent-%COMP%] {\n  color: #ff324d;\n}\n\nul.other-recipes[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin: 10px 0px;\n}\n\n.random-candy[_ngcontent-%COMP%] {\n  max-width: 65%;\n}\n\n.licensed-img[_ngcontent-%COMP%] {\n  font-size: 10px;\n}\n\n.licensed-img[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  margin-bottom: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hc2hlci9Eb2N1bWVudHMvcmVzdEFwaS9jYW5keS1ibG9nL3NyYy9hcHAvbWFpbi9ibG9nL3BhZ2VzL2tldG8tZGlldC9rZXRvLWRpZXQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21haW4vYmxvZy9wYWdlcy9rZXRvLWRpZXQva2V0by1kaWV0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBQTtFQUNBLGlCQUFBO0FDQ0Y7O0FERUE7RUFDRSxZQUFBO0FDQ0Y7O0FERUE7RUFDRSxZQUFBO0FDQ0Y7O0FERUE7OztFQUdFLGdCQUFBO0VBQ0EsMEJBQUE7QUNDRjs7QURFQTtFQUNFLGNBQUE7RUFDQSxZQUFBO0FDQ0Y7O0FERUE7RUFDRSxjQUFBO0FDQ0Y7O0FERUE7RUFDRSxnQkFBQTtBQ0NGOztBREVBO0VBQ0UsY0FBQTtBQ0NGOztBREVBO0VBSUUsZUFBQTtBQ0ZGOztBRERFO0VBQ0UsZ0JBQUE7QUNHSiIsImZpbGUiOiJzcmMvYXBwL21haW4vYmxvZy9wYWdlcy9rZXRvLWRpZXQva2V0by1kaWV0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZhLWNhbGVuZGFyIHtcbiAgY29sb3I6ICNmZjMyNGQ7XG4gIG1hcmdpbi1yaWdodDogNXB4O1xufVxuXG4uYmxvZ19tZXRhIHtcbiAgbWFyZ2luOiAxJSAwO1xufVxuXG4udG9waWMtc2VjdGlvbiB7XG4gIG1hcmdpbjogNSUgMDtcbn1cblxuaDIsXG5oMyxcbmg0IHtcbiAgZm9udC13ZWlnaHQ6IDcwMDtcbiAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG59XG5cbmltZyB7XG4gIG1heC13aWR0aDogODUlO1xuICBtYXJnaW46IDUlIDA7XG59XG5cbmEge1xuICBjb2xvcjogI2ZmMzI0ZDtcbn1cblxudWwub3RoZXItcmVjaXBlcyBsaSB7XG4gIG1hcmdpbjogMTBweCAwcHg7XG59XG5cbi5yYW5kb20tY2FuZHkge1xuICBtYXgtd2lkdGg6IDY1JTtcbn1cblxuLmxpY2Vuc2VkLWltZyB7XG4gIGltZyB7XG4gICAgbWFyZ2luLWJvdHRvbTogMDtcbiAgfVxuICBmb250LXNpemU6IDEwcHg7XG59XG4iLCIuZmEtY2FsZW5kYXIge1xuICBjb2xvcjogI2ZmMzI0ZDtcbiAgbWFyZ2luLXJpZ2h0OiA1cHg7XG59XG5cbi5ibG9nX21ldGEge1xuICBtYXJnaW46IDElIDA7XG59XG5cbi50b3BpYy1zZWN0aW9uIHtcbiAgbWFyZ2luOiA1JSAwO1xufVxuXG5oMixcbmgzLFxuaDQge1xuICBmb250LXdlaWdodDogNzAwO1xuICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbn1cblxuaW1nIHtcbiAgbWF4LXdpZHRoOiA4NSU7XG4gIG1hcmdpbjogNSUgMDtcbn1cblxuYSB7XG4gIGNvbG9yOiAjZmYzMjRkO1xufVxuXG51bC5vdGhlci1yZWNpcGVzIGxpIHtcbiAgbWFyZ2luOiAxMHB4IDBweDtcbn1cblxuLnJhbmRvbS1jYW5keSB7XG4gIG1heC13aWR0aDogNjUlO1xufVxuXG4ubGljZW5zZWQtaW1nIHtcbiAgZm9udC1zaXplOiAxMHB4O1xufVxuLmxpY2Vuc2VkLWltZyBpbWcge1xuICBtYXJnaW4tYm90dG9tOiAwO1xufSJdfQ== */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](KetoDietComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'candy-keto-diet',
+                templateUrl: './keto-diet.component.html',
+                styleUrls: ['./keto-diet.component.scss'],
+            }]
+    }], null, null); })();
 
 
 /***/ }),
@@ -1215,67 +1674,81 @@ function SourStripsDiscoveryComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "p");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "img", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " I've always loved sour candy, ex: sour Sweettarts, sour straws, Warheads and others. And then there are some candy companies that don't seem to know the definition of sour. It's like they just put the word \"Sour\", in big bold packaging, just because the package printing ink is cheap or something. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, " I had first heard about sour strips from my brother when he was on his way to Houston to workout at the Alphalete gym. He had called me to let me know that the gym had some sour candy in stock and it was supposedly what people were calling ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "b");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "\"The best candy they've ever had\"");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, ". ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " I checked online and it was already sold out online and would take a while before they restocked, so on a whim, I told me to get $20 worth of the candy. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "img", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, " I've always loved sour candy, ex: sour Sweettarts, sour straws, Warheads and others. And then there are some candy companies that don't seem to know the definition of sour. It's like they just put the word \"");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "b");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Sour");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "\", in big bold packaging, just because the package printing ink is cheap or something. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "h3");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "What sucks about sour candy");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "h3");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "What sucks about sour candy");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, " Here are just some of the issues I tend to come across with majority of sour candy. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, " Here are just some of the issues I tend to come across with majority of sour candy. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "ul", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, " A lot of sour candies just aren't that sour, and sometimes just bland. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "ul");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, " A lot of sour candies just aren't that sour, and sometimes just bland. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, " Not sealable(after a while, the sour content fades, leaving the consumer with bland candy) ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, " Not sealable(after a while, the sour content fades, leaving the consumer with bland candy) ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "Wet and sticky");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "Wet and sticky");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, " After the 2nd or 3rd piece of candy, the sour sensation afterwards with every bite disappears ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, " After the 2nd or 3rd piece of candy, the sour sensation afterwards with every bite disappears ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, " Is \"extreme sour\" really as sour as the manufactor can make it? ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "h3");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "The Good news and the Bad news...");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " Let's start off with the bad news. Somehow within an hour and a half, Alphalete had sold almost run out of stock of Sour Strips, and my brother managed to get me only 2 packs Sour Strips, about $7 or so of the total of the $20 I initially wanted... ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "Still, nonetheless, the famed candy had arrived.");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](41, "img", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](42, "img", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, " And now the good news. At a first glance, I liked the packaging and design. More importantly to me, there was a ziplock on the top of the bag so if this candy was the real deal, I could savor it for days. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, " So I tore off the seal and tried out a candy strip. And boy was it sour! It was tasty too. This candy had all the elements of what sour candy should be. And to put the cherry on top, it wasn't wet! Combined with the great packaging, this really is a great product. Somehow I managed to eat 2-3 strips before it felt like the sour content was burning my tongue, and yet I craved more. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, " Overall, it's really great candy that I would recommend to everyone, the only issue is the price, at about $3.50 a bag, it's a bit pricy. Hopefully, that comes down in the future ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, " Anyways here's the ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "a", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "span", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "LINK");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, " Is \"extreme sour\" really as sour as the manufactor can make it? ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, " to the sour strips website if anyone is interested. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "h3");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "The Good news and the Bad news...");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, " The bad news... Somehow within an hour and a half, Alphalete had almost run out of their supply of Sour Strips, and my brother managed to get me only 2 packs Sour Strips, about $7 or so of the total of the $20 I initially wanted... ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](49, "Still, nonetheless, the famed candy had arrived.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](51, "img", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](52, "img", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, " And now the good news. At a first glance, I liked the packaging and design. More importantly to me, there was a ziplock on the top of the bag so if this candy was the real deal, I could savor it for days. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, " So I tore off the seal and tried out a candy strip. And boy was it sour! It was tasty too. This candy had all the elements of what sour candy should be. And to put the cherry on top, it wasn't wet! Combined with the great packaging, this really is a great product. Somehow I managed to eat 2-3 strips before it felt like the sour content was burning my tongue, and yet I craved more. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, " Overall, it's really great candy that I would recommend to everyone, the only issue is the price, at about $3.50 a bag, it's a bit pricy. Hopefully, that comes down in the future ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, " Anyways here's the ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "a", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "span", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](63, "LINK");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](64, " to the sour strips website if anyone is interested. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1289,20 +1762,21 @@ function SourStripsDiscoveryComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.article.date);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.article.description, " I had first heard about sour strips from my brother when he was on his way to Houston to workout at the Alphalete gym. He had called me to let me know that the gym had some sour candy in stock and it was supposedly what people were calling \"The best candy they've ever had\". I checked online and it was already sold out online and would take a while before they restocked, so on a whim, I told me to get $20 worth of the candy. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.article.description, " ");
 } }
 class SourStripsDiscoveryComponent {
-    constructor() {
-        this.article = _article_data_article_data__WEBPACK_IMPORTED_MODULE_1__["Articles"][0];
-        window.scrollTo(0, 0);
+    get article() {
+        return _article_data_article_data__WEBPACK_IMPORTED_MODULE_1__["Articles"].find((article) => {
+            return article.header === 'My Journey into Sour Strips';
+        });
     }
 }
 SourStripsDiscoveryComponent.ɵfac = function SourStripsDiscoveryComponent_Factory(t) { return new (t || SourStripsDiscoveryComponent)(); };
-SourStripsDiscoveryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SourStripsDiscoveryComponent, selectors: [["candy-sour-strips-discovery"]], decls: 1, vars: 1, consts: [[4, "ngIf"], [1, "blog_post"], [1, "blog_content"], [1, "blog_text"], [1, "blog_heading"], [1, "blog_meta"], [1, "fas", "fa-calendar"], [1, "topic-section"], ["src", "assets\\imgs\\candy\\sour-candy.jfif", "alt", "", 1, "generic-img"], [1, "candy-issues"], [1, "image-layout"], ["src", "assets\\images\\sour-strips\\strawberry.jpg", "alt", ""], ["src", "assets\\images\\sour-strips\\nutrition-facts4.png", "alt", ""], ["href", "https://www.sourstrips.com/"], [1, "url-link"]], template: function SourStripsDiscoveryComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, SourStripsDiscoveryComponent_div_0_Template, 55, 3, "div", 0);
+SourStripsDiscoveryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SourStripsDiscoveryComponent, selectors: [["candy-sour-strips-discovery"]], decls: 1, vars: 1, consts: [[4, "ngIf"], [1, "blog_post"], [1, "blog_content"], [1, "blog_text"], [1, "blog_heading"], [1, "blog_meta"], [1, "fas", "fa-calendar"], [1, "topic-section"], ["src", "assets\\imgs\\candy\\sour-candy.jfif", "alt", "", 1, "generic-img"], [1, "image-layout"], ["src", "assets\\images\\sour-strips\\strawberry.jpg", "alt", ""], ["src", "assets\\images\\sour-strips\\nutrition-facts4.png", "alt", ""], ["href", "https://www.sourstrips.com/"], [1, "url-link"]], template: function SourStripsDiscoveryComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, SourStripsDiscoveryComponent_div_0_Template, 65, 3, "div", 0);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.article);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"]], styles: ["@charset \"UTF-8\";\np[_ngcontent-%COMP%] {\n  font-size: 16px;\n  max-width: 80%;\n  margin: 20px 0;\n}\nh2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%] {\n  font-weight: 700;\n  text-transform: capitalize;\n}\nimg[_ngcontent-%COMP%] {\n  width: 25%;\n  margin: 2.5% 5%;\n}\n.topic-section[_ngcontent-%COMP%] {\n  margin: 5% 0;\n}\n.fa-calendar[_ngcontent-%COMP%] {\n  color: #ff324d;\n  margin-right: 5px;\n}\n.blog_meta[_ngcontent-%COMP%] {\n  margin: 1% 0;\n}\n.image-layout[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n}\n.topic-section[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]::before {\n  content: \"\u2022\";\n  color: black;\n  font-size: 24px;\n  margin: 0 2%;\n}\n.topic-section[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 16px;\n}\n.url-link[_ngcontent-%COMP%] {\n  color: blue;\n}\n.generic-img[_ngcontent-%COMP%] {\n  width: 100%;\n  margin-left: 0;\n  max-width: 600px;\n}\n@media only screen and (min-width: 961px) {\n  .image-layout[_ngcontent-%COMP%] {\n    flex-direction: center;\n  }\n\n  img[_ngcontent-%COMP%] {\n    width: 25%;\n  }\n}\n@media only screen and (max-width: 960px) {\n  .image-layout[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n\n  img[_ngcontent-%COMP%] {\n    width: 70%;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbi9ibG9nL3BhZ2VzL3NvdXItc3RyaXBzLWRpc2NvdmVyeS9zb3VyLXN0cmlwcy1kaXNjb3ZlcnkuY29tcG9uZW50LnNjc3MiLCIvVXNlcnMvYXNoZXIvRG9jdW1lbnRzL3Jlc3RBcGkvY2FuZHktYmxvZy9zcmMvYXBwL21haW4vYmxvZy9wYWdlcy9zb3VyLXN0cmlwcy1kaXNjb3Zlcnkvc291ci1zdHJpcHMtZGlzY292ZXJ5LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQ0FoQjtFQUNFLGVBQUE7RUFDQSxjQUFBO0VBQ0EsY0FBQTtBREVGO0FDQ0E7OztFQUdFLGdCQUFBO0VBQ0EsMEJBQUE7QURFRjtBQ0NBO0VBQ0UsVUFBQTtFQUNBLGVBQUE7QURFRjtBQ0NBO0VBQ0UsWUFBQTtBREVGO0FDQ0E7RUFDRSxjQUFBO0VBQ0EsaUJBQUE7QURFRjtBQ0NBO0VBQ0UsWUFBQTtBREVGO0FDQ0E7RUFDRSxhQUFBO0VBQ0EsMkJBQUE7QURFRjtBQ0NBO0VBQ0UsWUFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0VBQ0EsWUFBQTtBREVGO0FDQ0E7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxlQUFBO0FERUY7QUNDQTtFQUNFLFdBQUE7QURFRjtBQ0NBO0VBQ0ksV0FBQTtFQUNBLGNBQUE7RUFDQSxnQkFBQTtBREVKO0FDRUE7RUFDRTtJQUNFLHNCQUFBO0VEQ0Y7O0VDRUE7SUFDRSxVQUFBO0VEQ0Y7QUFDRjtBQ0VBO0VBQ0U7SUFDRSxzQkFBQTtFREFGOztFQ0dBO0lBQ0UsVUFBQTtFREFGO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9tYWluL2Jsb2cvcGFnZXMvc291ci1zdHJpcHMtZGlzY292ZXJ5L3NvdXItc3RyaXBzLWRpc2NvdmVyeS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbnAge1xuICBmb250LXNpemU6IDE2cHg7XG4gIG1heC13aWR0aDogODAlO1xuICBtYXJnaW46IDIwcHggMDtcbn1cblxuaDIsXG5oMyxcbmg0IHtcbiAgZm9udC13ZWlnaHQ6IDcwMDtcbiAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG59XG5cbmltZyB7XG4gIHdpZHRoOiAyNSU7XG4gIG1hcmdpbjogMi41JSA1JTtcbn1cblxuLnRvcGljLXNlY3Rpb24ge1xuICBtYXJnaW46IDUlIDA7XG59XG5cbi5mYS1jYWxlbmRhciB7XG4gIGNvbG9yOiAjZmYzMjRkO1xuICBtYXJnaW4tcmlnaHQ6IDVweDtcbn1cblxuLmJsb2dfbWV0YSB7XG4gIG1hcmdpbjogMSUgMDtcbn1cblxuLmltYWdlLWxheW91dCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1zdGFydDtcbn1cblxuLnRvcGljLXNlY3Rpb24gdWwgbGk6OmJlZm9yZSB7XG4gIGNvbnRlbnQ6IFwi4oCiXCI7XG4gIGNvbG9yOiBibGFjaztcbiAgZm9udC1zaXplOiAyNHB4O1xuICBtYXJnaW46IDAgMiU7XG59XG5cbi50b3BpYy1zZWN0aW9uIHVsIGxpIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZm9udC1zaXplOiAxNnB4O1xufVxuXG4udXJsLWxpbmsge1xuICBjb2xvcjogYmx1ZTtcbn1cblxuLmdlbmVyaWMtaW1nIHtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbi1sZWZ0OiAwO1xuICBtYXgtd2lkdGg6IDYwMHB4O1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDk2MXB4KSB7XG4gIC5pbWFnZS1sYXlvdXQge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjZW50ZXI7XG4gIH1cblxuICBpbWcge1xuICAgIHdpZHRoOiAyNSU7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogOTYwcHgpIHtcbiAgLmltYWdlLWxheW91dCB7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgfVxuXG4gIGltZyB7XG4gICAgd2lkdGg6IDcwJTtcbiAgfVxufSIsInAge1xuICBmb250LXNpemU6IDE2cHg7XG4gIG1heC13aWR0aDogODAlO1xuICBtYXJnaW46IDIwcHggMDtcbn1cblxuaDIsXG5oMyxcbmg0IHtcbiAgZm9udC13ZWlnaHQ6IDcwMDtcbiAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG59XG5cbmltZyB7XG4gIHdpZHRoOiAyNSU7XG4gIG1hcmdpbjogMi41JSA1JTtcbn1cblxuLnRvcGljLXNlY3Rpb24ge1xuICBtYXJnaW46IDUlIDA7XG59XG5cbi5mYS1jYWxlbmRhciB7XG4gIGNvbG9yOiAjZmYzMjRkO1xuICBtYXJnaW4tcmlnaHQ6IDVweDtcbn1cblxuLmJsb2dfbWV0YSB7XG4gIG1hcmdpbjogMSUgMDtcbn1cblxuLmltYWdlLWxheW91dCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1zdGFydDtcbn1cblxuLnRvcGljLXNlY3Rpb24gdWwgbGk6OmJlZm9yZSB7XG4gIGNvbnRlbnQ6IFwi4oCiXCI7XG4gIGNvbG9yOiBibGFjaztcbiAgZm9udC1zaXplOiAyNHB4O1xuICBtYXJnaW46IDAgMiU7XG59XG5cbi50b3BpYy1zZWN0aW9uIHVsIGxpIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZm9udC1zaXplOiAxNnB4O1xufVxuXG4udXJsLWxpbmsge1xuICBjb2xvcjogYmx1ZTtcbn1cblxuLmdlbmVyaWMtaW1nIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXJnaW4tbGVmdDogMDtcbiAgICBtYXgtd2lkdGg6IDYwMHB4O1xuXG59XG5cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1pbi13aWR0aDogOTYxcHgpIHtcbiAgLmltYWdlLWxheW91dCB7XG4gICAgZmxleC1kaXJlY3Rpb246IGNlbnRlcjtcbiAgfVxuXG4gIGltZyB7XG4gICAgd2lkdGg6IDI1JTtcbiAgfVxufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDk2MHB4KSB7XG4gIC5pbWFnZS1sYXlvdXQge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cblxuICBpbWcge1xuICAgIHdpZHRoOiA3MCU7XG4gIH1cbn1cbiJdfQ== */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"]], styles: ["@charset \"UTF-8\";\np[_ngcontent-%COMP%] {\n  font-size: 16px;\n  margin: 20px 0;\n}\nh2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%] {\n  font-weight: 700;\n  text-transform: capitalize;\n}\nimg[_ngcontent-%COMP%] {\n  max-width: 85%;\n}\n.topic-section[_ngcontent-%COMP%] {\n  margin: 5% 0;\n}\n.fa-calendar[_ngcontent-%COMP%] {\n  color: #ff324d;\n  margin-right: 5px;\n}\n.blog_meta[_ngcontent-%COMP%] {\n  margin: 1% 0;\n}\n.image-layout[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n}\n.image-layout[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  max-height: 400px;\n  margin: 3%;\n}\n.topic-section[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]::before {\n  content: \"\u2022\";\n  color: black;\n  font-size: 24px;\n  margin: 0 2%;\n}\n.topic-section[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 16px;\n}\n.url-link[_ngcontent-%COMP%] {\n  color: blue;\n}\n@media only screen and (min-width: 961px) {\n  .image-layout[_ngcontent-%COMP%] {\n    flex-direction: center;\n  }\n}\n@media only screen and (max-width: 960px) {\n  .image-layout[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbi9ibG9nL3BhZ2VzL3NvdXItc3RyaXBzLWRpc2NvdmVyeS9zb3VyLXN0cmlwcy1kaXNjb3ZlcnkuY29tcG9uZW50LnNjc3MiLCIvVXNlcnMvYXNoZXIvRG9jdW1lbnRzL3Jlc3RBcGkvY2FuZHktYmxvZy9zcmMvYXBwL21haW4vYmxvZy9wYWdlcy9zb3VyLXN0cmlwcy1kaXNjb3Zlcnkvc291ci1zdHJpcHMtZGlzY292ZXJ5LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQ0FoQjtFQUNFLGVBQUE7RUFDQSxjQUFBO0FERUY7QUNDQTs7O0VBR0UsZ0JBQUE7RUFDQSwwQkFBQTtBREVGO0FDQ0E7RUFDRSxjQUFBO0FERUY7QUNDQTtFQUNFLFlBQUE7QURFRjtBQ0NBO0VBQ0UsY0FBQTtFQUNBLGlCQUFBO0FERUY7QUNDQTtFQUNFLFlBQUE7QURFRjtBQ0NBO0VBQ0UsYUFBQTtFQUNBLDJCQUFBO0FERUY7QUNERTtFQUNFLGlCQUFBO0VBQ0EsVUFBQTtBREdKO0FDQ0E7RUFDRSxZQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSxZQUFBO0FERUY7QUNDQTtFQUNFLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGVBQUE7QURFRjtBQ0NBO0VBQ0UsV0FBQTtBREVGO0FDQ0E7RUFDRTtJQUNFLHNCQUFBO0VERUY7QUFDRjtBQ0NBO0VBQ0U7SUFDRSxzQkFBQTtFRENGO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9tYWluL2Jsb2cvcGFnZXMvc291ci1zdHJpcHMtZGlzY292ZXJ5L3NvdXItc3RyaXBzLWRpc2NvdmVyeS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbnAge1xuICBmb250LXNpemU6IDE2cHg7XG4gIG1hcmdpbjogMjBweCAwO1xufVxuXG5oMixcbmgzLFxuaDQge1xuICBmb250LXdlaWdodDogNzAwO1xuICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbn1cblxuaW1nIHtcbiAgbWF4LXdpZHRoOiA4NSU7XG59XG5cbi50b3BpYy1zZWN0aW9uIHtcbiAgbWFyZ2luOiA1JSAwO1xufVxuXG4uZmEtY2FsZW5kYXIge1xuICBjb2xvcjogI2ZmMzI0ZDtcbiAgbWFyZ2luLXJpZ2h0OiA1cHg7XG59XG5cbi5ibG9nX21ldGEge1xuICBtYXJnaW46IDElIDA7XG59XG5cbi5pbWFnZS1sYXlvdXQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQ7XG59XG4uaW1hZ2UtbGF5b3V0IGltZyB7XG4gIG1heC1oZWlnaHQ6IDQwMHB4O1xuICBtYXJnaW46IDMlO1xufVxuXG4udG9waWMtc2VjdGlvbiB1bCBsaTo6YmVmb3JlIHtcbiAgY29udGVudDogXCLigKJcIjtcbiAgY29sb3I6IGJsYWNrO1xuICBmb250LXNpemU6IDI0cHg7XG4gIG1hcmdpbjogMCAyJTtcbn1cblxuLnRvcGljLXNlY3Rpb24gdWwgbGkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi51cmwtbGluayB7XG4gIGNvbG9yOiBibHVlO1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDk2MXB4KSB7XG4gIC5pbWFnZS1sYXlvdXQge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjZW50ZXI7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogOTYwcHgpIHtcbiAgLmltYWdlLWxheW91dCB7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgfVxufSIsInAge1xuICBmb250LXNpemU6IDE2cHg7XG4gIG1hcmdpbjogMjBweCAwO1xufVxuXG5oMixcbmgzLFxuaDQge1xuICBmb250LXdlaWdodDogNzAwO1xuICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbn1cblxuaW1nIHtcbiAgbWF4LXdpZHRoOiA4NSU7XG59XG5cbi50b3BpYy1zZWN0aW9uIHtcbiAgbWFyZ2luOiA1JSAwO1xufVxuXG4uZmEtY2FsZW5kYXIge1xuICBjb2xvcjogI2ZmMzI0ZDtcbiAgbWFyZ2luLXJpZ2h0OiA1cHg7XG59XG5cbi5ibG9nX21ldGEge1xuICBtYXJnaW46IDElIDA7XG59XG5cbi5pbWFnZS1sYXlvdXQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQ7XG4gIGltZyB7XG4gICAgbWF4LWhlaWdodDogNDAwcHg7XG4gICAgbWFyZ2luOiAzJTtcbiAgfVxufVxuXG4udG9waWMtc2VjdGlvbiB1bCBsaTo6YmVmb3JlIHtcbiAgY29udGVudDogXCLigKJcIjtcbiAgY29sb3I6IGJsYWNrO1xuICBmb250LXNpemU6IDI0cHg7XG4gIG1hcmdpbjogMCAyJTtcbn1cblxuLnRvcGljLXNlY3Rpb24gdWwgbGkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi51cmwtbGluayB7XG4gIGNvbG9yOiBibHVlO1xufVxuXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDk2MXB4KSB7XG4gIC5pbWFnZS1sYXlvdXQge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjZW50ZXI7XG4gIH1cbn1cblxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA5NjBweCkge1xuICAuaW1hZ2UtbGF5b3V0IHtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICB9XG59XG4iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SourStripsDiscoveryComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1310,7 +1784,7 @@ SourStripsDiscoveryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
                 templateUrl: './sour-strips-discovery.component.html',
                 styleUrls: ['./sour-strips-discovery.component.scss'],
             }]
-    }], function () { return []; }, null); })();
+    }], null, null); })();
 
 
 /***/ }),
@@ -1338,13 +1812,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Top25Component_div_0_div_14_Template(rf, ctx) { if (rf & 1) {
-    const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+function Top25Component_div_0_div_14_div_4_button_17_Template(rf, ctx) { if (rf & 1) {
+    const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function Top25Component_div_0_div_14_div_4_button_17_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r9); const company_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit; const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3); return ctx_r7.routeToCompany(company_r4.name); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " More Info ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function Top25Component_div_0_div_14_div_4_Template(rf, ctx) { if (rf & 1) {
+    const _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function Top25Component_div_0_div_14_Template_a_click_3_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5); const company_r2 = ctx.$implicit; const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r4.routeToCompany(company_r2.name); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function Top25Component_div_0_div_14_div_4_Template_a_click_3_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11); const company_r4 = ctx.$implicit; const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3); return ctx_r10.routeToCompany(company_r4.name); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "img", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1352,7 +1833,7 @@ function Top25Component_div_0_div_14_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "h5", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "a", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function Top25Component_div_0_div_14_Template_a_click_8_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5); const company_r2 = ctx.$implicit; const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r6.routeToCompany(company_r2.name); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function Top25Component_div_0_div_14_div_4_Template_a_click_8_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11); const company_r4 = ctx.$implicit; const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3); return ctx_r12.routeToCompany(company_r4.name); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1366,30 +1847,53 @@ function Top25Component_div_0_div_14_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "button", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function Top25Component_div_0_div_14_Template_button_click_17_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5); const company_r2 = ctx.$implicit; const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r7.routeToCompany(company_r2.name); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " More Info ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, Top25Component_div_0_div_14_div_4_button_17_Template, 2, 0, "button", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const company_r2 = ctx.$implicit;
-    const i_r3 = ctx.index;
+    const company_r4 = ctx.$implicit;
+    const i_r5 = ctx.index;
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", company_r2.image, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", company_r4.image, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", i_r3 + 1, ") ", company_r2.name, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", 6 * (ctx_r3.p - 1) + i_r5 + 1, ") ", company_r4.name, "");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Location: ", company_r2.location, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Location: ", company_r4.location, "");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Net Sales: ", company_r2.netSales, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Net Sales: ", company_r4.netSales, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", company_r4.infoAvailable);
 } }
-const _c0 = function (a1) { return { itemsPerPage: 10, currentPage: a1 }; };
+const _c0 = function (a1) { return { itemsPerPage: 6, currentPage: a1 }; };
+function Top25Component_div_0_div_14_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, Top25Component_div_0_div_14_div_4_Template, 18, 6, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](5, "paginate");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](5, 1, ctx_r1.companies, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](4, _c0, ctx_r1.p)));
+} }
+function Top25Component_div_0_div_15_Template(rf, ctx) { if (rf & 1) {
+    const _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "pagination-controls", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("pageChange", function Top25Component_div_0_div_15_Template_pagination_controls_pageChange_1_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r14); const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r13.pageChangeEvent($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
 function Top25Component_div_0_Template(rf, ctx) { if (rf & 1) {
-    const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -1406,21 +1910,15 @@ function Top25Component_div_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, Top25Component_div_0_div_14_Template, 19, 5, "div", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](15, "paginate");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, Top25Component_div_0_div_14_Template, 6, 6, "div", 0);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "pagination-controls", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("pageChange", function Top25Component_div_0_Template_pagination_controls_pageChange_17_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r9); const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r8.pageChangeEvent($event); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, Top25Component_div_0_div_15_Template, 2, 0, "div", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -1428,32 +1926,56 @@ function Top25Component_div_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.article.header, " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.article.date);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](15, 3, ctx_r0.companies, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](6, _c0, ctx_r0.p)));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.article.description, " More info for additional companies will be added soon. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.gridViewSelected);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.gridViewSelected);
 } }
 class Top25Component {
-    constructor(router) {
+    constructor(router, renderer) {
         this.router = router;
-        this.article = _article_data_article_data__WEBPACK_IMPORTED_MODULE_1__["Articles"][0];
+        this.renderer = renderer;
         this.companies = _top_25_data__WEBPACK_IMPORTED_MODULE_2__["Companies"];
         this.p = 1;
-        window.scrollTo(0, 0);
+        this.gridViewSelected = true;
+        this.tableViewSelected = false;
+    }
+    get article() {
+        return _article_data_article_data__WEBPACK_IMPORTED_MODULE_1__["Articles"].find((article) => {
+            return article.header === 'Top 10 Candy Companies in 2020';
+        });
     }
     pageChangeEvent(e) {
         window.scrollTo(0, 0);
         this.p = e;
+    }
+    changeLayoutView(view) {
+        if (view === 'gridViewSelected') {
+            this.gridViewSelected = true;
+            this.tableViewSelected = false;
+            this.renderer.addClass(document.querySelector('#gridBtn'), 'selectedView');
+            this.renderer.removeClass(document.querySelector('#tableBtn'), 'selectedView');
+        }
+        else {
+            this.gridViewSelected = false;
+            this.tableViewSelected = true;
+            this.renderer.addClass(document.querySelector('#tableBtn'), 'selectedView');
+            this.renderer.removeClass(document.querySelector('#gridBtn'), 'selectedView');
+        }
     }
     routeToCompany(name) {
         const link = name.split(' ').join('-');
         this.router.navigate(['../company', link]);
     }
 }
-Top25Component.ɵfac = function Top25Component_Factory(t) { return new (t || Top25Component)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"])); };
-Top25Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Top25Component, selectors: [["candy-top-25"]], decls: 1, vars: 1, consts: [[4, "ngIf"], [1, "blog_post"], [1, "blog_content"], [1, "blog_text"], [1, "blog_heading"], [1, "blog_meta"], [1, "fas", "fa-calendar"], [1, "section", "tranding_post", "pb_70"], [1, "container"], [1, "row"], ["class", "col-lg-6 col-sm-6", 4, "ngFor", "ngForOf"], [1, "flex-container"], [1, "my-pagination", 3, "pageChange"], [1, "col-lg-6", "col-sm-6"], [1, "blog_post", "blog_grid_overlay"], [1, "routerlink", 3, "click"], ["alt", "tranding_post_img", 3, "src"], [1, "align-info"], [1, "location"], ["type", "button", 1, "btn", "btn-default", "btn-sm", 3, "click"]], template: function Top25Component_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, Top25Component_div_0_Template, 18, 8, "div", 0);
+Top25Component.ɵfac = function Top25Component_Factory(t) { return new (t || Top25Component)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"])); };
+Top25Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Top25Component, selectors: [["candy-top-25"]], decls: 1, vars: 1, consts: [[4, "ngIf"], [1, "blog_post"], [1, "blog_content"], [1, "blog_text"], [1, "blog_heading"], [1, "blog_meta"], [1, "fas", "fa-calendar"], [1, "topic-section"], ["class", "flex-container", 4, "ngIf"], [1, "tranding_post", "pb_70"], [1, "container"], [1, "row"], ["class", "col-lg-6 col-sm-6", 4, "ngFor", "ngForOf"], [1, "col-lg-6", "col-sm-6"], [1, "blog_post", "blog_grid_overlay"], [1, "routerlink", 3, "click"], ["alt", "tranding_post_img", 3, "src"], [1, "align-info"], [1, "location"], ["class", "btn btn-default btn-sm", "type", "button", 3, "click", 4, "ngIf"], ["type", "button", 1, "btn", "btn-default", "btn-sm", 3, "click"], [1, "flex-container"], [1, "my-pagination", 3, "pageChange"]], template: function Top25Component_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, Top25Component_div_0_Template, 16, 5, "div", 0);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.article);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], ngx_pagination__WEBPACK_IMPORTED_MODULE_5__["PaginationControlsComponent"]], pipes: [ngx_pagination__WEBPACK_IMPORTED_MODULE_5__["PaginatePipe"]], styles: ["@charset \"UTF-8\";\np[_ngcontent-%COMP%] {\n  font-size: 16px;\n  max-width: 80%;\n  margin: 20px 0;\n}\nh2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%] {\n  font-weight: 700;\n  text-transform: capitalize;\n}\nh5[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:hover {\n  cursor: pointer;\n}\n.topic-section[_ngcontent-%COMP%] {\n  margin: 5% 0;\n}\n.fa-calendar[_ngcontent-%COMP%] {\n  color: #ff324d;\n  margin-right: 5px;\n}\n.blog_meta[_ngcontent-%COMP%] {\n  margin: 1% 0;\n}\n.image-layout[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n}\n.topic-section[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]::before {\n  content: \"\u2022\";\n  color: black;\n  font-size: 24px;\n  margin: 0 2%;\n}\n.topic-section[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 16px;\n}\n.url-link[_ngcontent-%COMP%] {\n  color: blue;\n}\n.generic-img[_ngcontent-%COMP%] {\n  width: 100%;\n  margin-left: 0;\n  max-width: 600px;\n}\n.align-info[_ngcontent-%COMP%] {\n  color: white;\n  display: flex;\n  justify-content: space-between;\n}\n.align-info[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  text-transform: none;\n  padding: 3px;\n}\n.flex-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 30px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbi9ibG9nL3BhZ2VzL3RvcC0yNS90b3AtMjUuY29tcG9uZW50LnNjc3MiLCIvVXNlcnMvYXNoZXIvRG9jdW1lbnRzL3Jlc3RBcGkvY2FuZHktYmxvZy9zcmMvYXBwL21haW4vYmxvZy9wYWdlcy90b3AtMjUvdG9wLTI1LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQ0FoQjtFQUNJLGVBQUE7RUFDQSxjQUFBO0VBQ0EsY0FBQTtBREVKO0FDQ0U7OztFQUdFLGdCQUFBO0VBQ0EsMEJBQUE7QURFSjtBQ0NFO0VBQ0UsZUFBQTtBREVKO0FDQ0U7RUFDRSxZQUFBO0FERUo7QUNDRTtFQUNFLGNBQUE7RUFDQSxpQkFBQTtBREVKO0FDQ0U7RUFDRSxZQUFBO0FERUo7QUNDRTtFQUNFLGFBQUE7RUFDQSwyQkFBQTtBREVKO0FDQ0U7RUFDRSxZQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSxZQUFBO0FERUo7QUNDRTtFQUNFLGFBQUE7RUFDQSxtQkFBQTtFQUNBLGVBQUE7QURFSjtBQ0NFO0VBQ0UsV0FBQTtBREVKO0FDQ0U7RUFDSSxXQUFBO0VBQ0EsY0FBQTtFQUNBLGdCQUFBO0FERU47QUNDRTtFQUNJLFlBQUE7RUFDQSxhQUFBO0VBQ0EsOEJBQUE7QURFTjtBQ0FNO0VBQ0ksb0JBQUE7RUFDQSxZQUFBO0FERVY7QUNFRTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsbUJBQUE7QURDSiIsImZpbGUiOiJzcmMvYXBwL21haW4vYmxvZy9wYWdlcy90b3AtMjUvdG9wLTI1LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGNoYXJzZXQgXCJVVEYtOFwiO1xucCB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgbWF4LXdpZHRoOiA4MCU7XG4gIG1hcmdpbjogMjBweCAwO1xufVxuXG5oMixcbmgzLFxuaDQge1xuICBmb250LXdlaWdodDogNzAwO1xuICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbn1cblxuaDUgOmhvdmVyIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4udG9waWMtc2VjdGlvbiB7XG4gIG1hcmdpbjogNSUgMDtcbn1cblxuLmZhLWNhbGVuZGFyIHtcbiAgY29sb3I6ICNmZjMyNGQ7XG4gIG1hcmdpbi1yaWdodDogNXB4O1xufVxuXG4uYmxvZ19tZXRhIHtcbiAgbWFyZ2luOiAxJSAwO1xufVxuXG4uaW1hZ2UtbGF5b3V0IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LXN0YXJ0O1xufVxuXG4udG9waWMtc2VjdGlvbiB1bCBsaTo6YmVmb3JlIHtcbiAgY29udGVudDogXCLigKJcIjtcbiAgY29sb3I6IGJsYWNrO1xuICBmb250LXNpemU6IDI0cHg7XG4gIG1hcmdpbjogMCAyJTtcbn1cblxuLnRvcGljLXNlY3Rpb24gdWwgbGkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi51cmwtbGluayB7XG4gIGNvbG9yOiBibHVlO1xufVxuXG4uZ2VuZXJpYy1pbWcge1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luLWxlZnQ6IDA7XG4gIG1heC13aWR0aDogNjAwcHg7XG59XG5cbi5hbGlnbi1pbmZvIHtcbiAgY29sb3I6IHdoaXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4uYWxpZ24taW5mbyBidXR0b24ge1xuICB0ZXh0LXRyYW5zZm9ybTogbm9uZTtcbiAgcGFkZGluZzogM3B4O1xufVxuXG4uZmxleC1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWFyZ2luLWJvdHRvbTogMzBweDtcbn0iLCJwIHtcbiAgICBmb250LXNpemU6IDE2cHg7XG4gICAgbWF4LXdpZHRoOiA4MCU7XG4gICAgbWFyZ2luOiAyMHB4IDA7XG4gIH1cbiAgXG4gIGgyLFxuICBoMyxcbiAgaDQge1xuICAgIGZvbnQtd2VpZ2h0OiA3MDA7XG4gICAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG4gIH1cblxuICBoNSA6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgfVxuICBcbiAgLnRvcGljLXNlY3Rpb24ge1xuICAgIG1hcmdpbjogNSUgMDtcbiAgfVxuICBcbiAgLmZhLWNhbGVuZGFyIHtcbiAgICBjb2xvcjogI2ZmMzI0ZDtcbiAgICBtYXJnaW4tcmlnaHQ6IDVweDtcbiAgfVxuICBcbiAgLmJsb2dfbWV0YSB7XG4gICAgbWFyZ2luOiAxJSAwO1xuICB9XG4gIFxuICAuaW1hZ2UtbGF5b3V0IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogZmxleC1zdGFydDtcbiAgfVxuICBcbiAgLnRvcGljLXNlY3Rpb24gdWwgbGk6OmJlZm9yZSB7XG4gICAgY29udGVudDogXCLigKJcIjtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgZm9udC1zaXplOiAyNHB4O1xuICAgIG1hcmdpbjogMCAyJTtcbiAgfVxuICBcbiAgLnRvcGljLXNlY3Rpb24gdWwgbGkge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDE2cHg7XG4gIH1cbiAgXG4gIC51cmwtbGluayB7XG4gICAgY29sb3I6IGJsdWU7XG4gIH1cbiAgXG4gIC5nZW5lcmljLWltZyB7XG4gICAgICB3aWR0aDogMTAwJTtcbiAgICAgIG1hcmdpbi1sZWZ0OiAwO1xuICAgICAgbWF4LXdpZHRoOiA2MDBweDtcbiAgfVxuXG4gIC5hbGlnbi1pbmZvIHtcbiAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG5cbiAgICAgIGJ1dHRvbiB7XG4gICAgICAgICAgdGV4dC10cmFuc2Zvcm06IG5vbmU7XG4gICAgICAgICAgcGFkZGluZzogM3B4O1xuICAgICAgfVxuICB9XG5cbiAgLmZsZXgtY29udGFpbmVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgbWFyZ2luLWJvdHRvbTogMzBweDtcbiAgfVxuICAiXX0= */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], ngx_pagination__WEBPACK_IMPORTED_MODULE_5__["PaginationControlsComponent"]], pipes: [ngx_pagination__WEBPACK_IMPORTED_MODULE_5__["PaginatePipe"]], styles: ["@charset \"UTF-8\";\np[_ngcontent-%COMP%] {\n  margin: 20px 0;\n}\nh2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%] {\n  font-weight: 700;\n  text-transform: capitalize;\n}\nh5[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:hover {\n  cursor: pointer;\n}\ntable[_ngcontent-%COMP%] {\n  margin: 5% 0;\n}\n.heading-row[_ngcontent-%COMP%] {\n  background-color: #ff324d;\n  color: white;\n}\n.flex-btn-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-end;\n}\n.btn-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  border: 1px solid #ff324d;\n  text-transform: none;\n}\n.btn-group[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:hover {\n  background-color: #ff324d;\n}\n.btn-group[_ngcontent-%COMP%]   .selectedView[_ngcontent-%COMP%] {\n  background-color: #ff324d;\n  color: white;\n}\n.topic-section[_ngcontent-%COMP%] {\n  margin: 5% 0;\n}\n.fa-calendar[_ngcontent-%COMP%] {\n  color: #ff324d;\n  margin-right: 5px;\n}\n.blog_meta[_ngcontent-%COMP%] {\n  margin: 1% 0;\n}\n.image-layout[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n}\n.topic-section[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]::before {\n  content: \"\u2022\";\n  color: black;\n  font-size: 24px;\n  margin: 0 2%;\n}\n.topic-section[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  font-size: 16px;\n}\n.url-link[_ngcontent-%COMP%] {\n  color: blue;\n}\n.generic-img[_ngcontent-%COMP%] {\n  width: 100%;\n  margin-left: 0;\n  max-width: 600px;\n}\n.align-info[_ngcontent-%COMP%] {\n  color: white;\n  display: flex;\n  justify-content: space-between;\n}\n.align-info[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  text-transform: none;\n  padding: 3px;\n}\n.flex-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 30px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFpbi9ibG9nL3BhZ2VzL3RvcC0yNS90b3AtMjUuY29tcG9uZW50LnNjc3MiLCIvVXNlcnMvYXNoZXIvRG9jdW1lbnRzL3Jlc3RBcGkvY2FuZHktYmxvZy9zcmMvYXBwL21haW4vYmxvZy9wYWdlcy90b3AtMjUvdG9wLTI1LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQ0FoQjtFQUNFLGNBQUE7QURFRjtBQ0NBOzs7RUFHRSxnQkFBQTtFQUNBLDBCQUFBO0FERUY7QUNDQTtFQUNFLGVBQUE7QURFRjtBQ0NBO0VBQ0UsWUFBQTtBREVGO0FDQ0E7RUFDRSx5QkFBQTtFQUNBLFlBQUE7QURFRjtBQ0NBO0VBQ0UsYUFBQTtFQUNBLHlCQUFBO0FERUY7QUNFRTtFQUNFLHlCQUFBO0VBQ0Esb0JBQUE7QURDSjtBQ0NFO0VBQ0UseUJBQUE7QURDSjtBQ0VFO0VBQ0UseUJBQUE7RUFDQSxZQUFBO0FEQUo7QUNJQTtFQUNFLFlBQUE7QURERjtBQ0lBO0VBQ0UsY0FBQTtFQUNBLGlCQUFBO0FEREY7QUNJQTtFQUNFLFlBQUE7QURERjtBQ0lBO0VBQ0UsYUFBQTtFQUNBLDJCQUFBO0FEREY7QUNJQTtFQUNFLFlBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUE7QURERjtBQ0lBO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtBRERGO0FDSUE7RUFDRSxXQUFBO0FEREY7QUNJQTtFQUNFLFdBQUE7RUFDQSxjQUFBO0VBQ0EsZ0JBQUE7QURERjtBQ0lBO0VBQ0UsWUFBQTtFQUNBLGFBQUE7RUFDQSw4QkFBQTtBRERGO0FDR0U7RUFDRSxvQkFBQTtFQUNBLFlBQUE7QURESjtBQ0tBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxtQkFBQTtBREZGIiwiZmlsZSI6InNyYy9hcHAvbWFpbi9ibG9nL3BhZ2VzL3RvcC0yNS90b3AtMjUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAY2hhcnNldCBcIlVURi04XCI7XG5wIHtcbiAgbWFyZ2luOiAyMHB4IDA7XG59XG5cbmgyLFxuaDMsXG5oNCB7XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG4gIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xufVxuXG5oNSA6aG92ZXIge1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbnRhYmxlIHtcbiAgbWFyZ2luOiA1JSAwO1xufVxuXG4uaGVhZGluZy1yb3cge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmYzMjRkO1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5mbGV4LWJ0bi1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xufVxuXG4uYnRuLWdyb3VwIGJ1dHRvbiB7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNmZjMyNGQ7XG4gIHRleHQtdHJhbnNmb3JtOiBub25lO1xufVxuLmJ0bi1ncm91cCBidXR0b246aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmYzMjRkO1xufVxuLmJ0bi1ncm91cCAuc2VsZWN0ZWRWaWV3IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmMzI0ZDtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4udG9waWMtc2VjdGlvbiB7XG4gIG1hcmdpbjogNSUgMDtcbn1cblxuLmZhLWNhbGVuZGFyIHtcbiAgY29sb3I6ICNmZjMyNGQ7XG4gIG1hcmdpbi1yaWdodDogNXB4O1xufVxuXG4uYmxvZ19tZXRhIHtcbiAgbWFyZ2luOiAxJSAwO1xufVxuXG4uaW1hZ2UtbGF5b3V0IHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LXN0YXJ0O1xufVxuXG4udG9waWMtc2VjdGlvbiB1bCBsaTo6YmVmb3JlIHtcbiAgY29udGVudDogXCLigKJcIjtcbiAgY29sb3I6IGJsYWNrO1xuICBmb250LXNpemU6IDI0cHg7XG4gIG1hcmdpbjogMCAyJTtcbn1cblxuLnRvcGljLXNlY3Rpb24gdWwgbGkge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi51cmwtbGluayB7XG4gIGNvbG9yOiBibHVlO1xufVxuXG4uZ2VuZXJpYy1pbWcge1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luLWxlZnQ6IDA7XG4gIG1heC13aWR0aDogNjAwcHg7XG59XG5cbi5hbGlnbi1pbmZvIHtcbiAgY29sb3I6IHdoaXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4uYWxpZ24taW5mbyBidXR0b24ge1xuICB0ZXh0LXRyYW5zZm9ybTogbm9uZTtcbiAgcGFkZGluZzogM3B4O1xufVxuXG4uZmxleC1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWFyZ2luLWJvdHRvbTogMzBweDtcbn0iLCJwIHtcbiAgbWFyZ2luOiAyMHB4IDA7XG59XG5cbmgyLFxuaDMsXG5oNCB7XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG4gIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xufVxuXG5oNSA6aG92ZXIge1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbnRhYmxlIHtcbiAgbWFyZ2luOiA1JSAwO1xufVxuXG4uaGVhZGluZy1yb3cge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmYzMjRkO1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5mbGV4LWJ0bi1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xufVxuXG4uYnRuLWdyb3VwIHtcbiAgYnV0dG9uIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZmYzMjRkO1xuICAgIHRleHQtdHJhbnNmb3JtOiBub25lO1xuICB9XG4gIGJ1dHRvbjpob3ZlciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmMzI0ZDtcbiAgfVxuXG4gIC5zZWxlY3RlZFZpZXcge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZjMyNGQ7XG4gICAgY29sb3I6IHdoaXRlO1xuICB9XG59XG5cbi50b3BpYy1zZWN0aW9uIHtcbiAgbWFyZ2luOiA1JSAwO1xufVxuXG4uZmEtY2FsZW5kYXIge1xuICBjb2xvcjogI2ZmMzI0ZDtcbiAgbWFyZ2luLXJpZ2h0OiA1cHg7XG59XG5cbi5ibG9nX21ldGEge1xuICBtYXJnaW46IDElIDA7XG59XG5cbi5pbWFnZS1sYXlvdXQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQ7XG59XG5cbi50b3BpYy1zZWN0aW9uIHVsIGxpOjpiZWZvcmUge1xuICBjb250ZW50OiBcIuKAolwiO1xuICBjb2xvcjogYmxhY2s7XG4gIGZvbnQtc2l6ZTogMjRweDtcbiAgbWFyZ2luOiAwIDIlO1xufVxuXG4udG9waWMtc2VjdGlvbiB1bCBsaSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuLnVybC1saW5rIHtcbiAgY29sb3I6IGJsdWU7XG59XG5cbi5nZW5lcmljLWltZyB7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tbGVmdDogMDtcbiAgbWF4LXdpZHRoOiA2MDBweDtcbn1cblxuLmFsaWduLWluZm8ge1xuICBjb2xvcjogd2hpdGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcblxuICBidXR0b24ge1xuICAgIHRleHQtdHJhbnNmb3JtOiBub25lO1xuICAgIHBhZGRpbmc6IDNweDtcbiAgfVxufVxuXG4uZmxleC1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgbWFyZ2luLWJvdHRvbTogMzBweDtcbn1cbiJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](Top25Component, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1461,7 +1983,7 @@ Top25Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
                 templateUrl: './top-25.component.html',
                 styleUrls: ['./top-25.component.scss'],
             }]
-    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }]; }, null); })();
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"] }]; }, null); })();
 
 
 /***/ })
